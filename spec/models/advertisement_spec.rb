@@ -1,9 +1,6 @@
 require 'spec_helper'
 
 describe Advertisement do
-<<<<<<< HEAD
-  pending "add some examples to (or delete) #{__FILE__}"
-=======
   let(:user) { FactoryGirl.create(:user) }
   let(:board) { FactoryGirl.create(:board) }
   let(:ad) { FactoryGirl.create(:advertisement, user: user, board: board) }
@@ -135,5 +132,4 @@ describe Advertisement do
       end
     end
   end
->>>>>>> f139e8b70c08277c503815aec6997bbd7289c3d1
 end

@@ -1,9 +1,6 @@
 require 'spec_helper'
 
 describe Tile do
-<<<<<<< HEAD
-  pending "add some examples to (or delete) #{__FILE__}"
-=======
   let(:user) { FactoryGirl.create(:user) }
   let(:board) { FactoryGirl.create(:board, user: user) }
   let(:ad) { FactoryGirl.create(:advertisement, user: user, board: board) }
@@ -132,5 +129,4 @@ describe Tile do
       end
     end
   end
->>>>>>> f139e8b70c08277c503815aec6997bbd7289c3d1
 end
