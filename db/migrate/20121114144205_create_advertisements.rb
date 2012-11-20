@@ -6,8 +6,8 @@ class CreateAdvertisements < ActiveRecord::Migration
       t.integer :height
       t.integer :width
       t.binary :image
-      t.integer :x_loc
-      t.integer :y_loc
+      t.integer :x_location
+      t.integer :y_location
 
       t.timestamps
     end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121114144417) do
+ActiveRecord::Schema.define(:version => 20121119140601) do
 
   create_table "advertisements", :force => true do |t|
     t.integer  "user_id"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(:version => 20121114144417) do
     t.integer  "height"
     t.integer  "width"
     t.binary   "image"
-    t.integer  "x_loc"
-    t.integer  "y_loc"
+    t.integer  "x_location"
+    t.integer  "y_location"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -35,12 +35,20 @@ ActiveRecord::Schema.define(:version => 20121114144417) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "payment_details", :force => true do |t|
+    t.integer  "user_id"
+    t.decimal  "amount"
+    t.integer  "payable_id"
+    t.string   "payable_type"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "tiles", :force => true do |t|
-    t.integer  "board_id"
     t.integer  "advertisement_id"
     t.decimal  "cost"
-    t.integer  "x_loc"
-    t.integer  "y_loc"
+    t.integer  "x_location"
+    t.integer  "y_location"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end

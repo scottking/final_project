@@ -93,7 +93,7 @@ describe Advertisement do
       describe 'larger than board width' do
 	before do
 	  ad.width = 6
-	  board.width = 6
+	  board.width = 5
 	end
 
 	it { should_not be_valid }

@@ -4,8 +4,8 @@ class CreateTiles < ActiveRecord::Migration
       t.integer :board_id
       t.integer :advertisement_id
       t.decimal :cost
-      t.integer :x_loc
-      t.integer :y_loc
+      t.integer :x_location
+      t.integer :y_location
 
       t.timestamps
     end

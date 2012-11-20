@@ -1,10 +1,51 @@
 class Advertisement < ActiveRecord::Base
-  attr_accessible :board_id, :height, :image, :user_id, :width, :x_loc, :y_loc
+  attr_accessible :height, :image, :width, :x_location, :y_location
   
   has_many :tiles
+  has_many :payment_details, as: :payable
   
   belongs_to :user
   belongs_to :board
+
+  validates :x_location, numericality: { greater_than_or_equal_to: 0}#also less than board_id.height
+  validates :y_location, numericality: { greater_than_or_equal_to: 0}#ad spec number 48,65
+  validates :height, numericality: { greater_than: 0}#also less than board_id.height
+  validates :width, numericality: { greater_than: 0}#also less than boad_id.width
+  validates :image, presence: true
+  
+  validate :sizing
+  
+  private
+  
+    def sizing
+      if self.x_location >= self.board.width
+	    errors.add(:x_location, "Can't be larger than width")
+	  end
+	  
+	  if self.y_location >= self.board.height
+	    errors.add(:y_location, "Can't be larger than height")
+	  end
+	  
+	  if self.width >= self.board.width
+	    errors.add(:width, "Can't be larger than width")
+	  end
+	  
+	  if self.height >= self.board.height
+	    errors.add(:height, "Can't be larger than height")
+	  end
+	  
+	  if self.x_location + self.width >= self.board.width
+	    errors.add(:x_location, 	"Can't be larger than width (combination error)")
+	    errors.add(:width, 		"Can't be larger than width (combination error)")
+	  end
+	  
+	  if self.y_location + self.height >= self.board.height
+	    errors.add(:y_location, 	"Can't be larger than height (combination error)")
+	    errors.add(:height, 		"Can't be larger than height (combination error)")
+	  end
+	  
+    end
   
   
 end
+
