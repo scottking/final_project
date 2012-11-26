@@ -4,11 +4,19 @@ describe "UserPages" do
   subject { page }
 
   describe 'signup' do
+    let(:submit) { 'Sign up' }
+
     before { visit signup_path }
 
     describe 'with invalid information' do
       it 'should not create a user' do
-	expect { click_button 'Sign up' }.not_to change(User, :count)
+	expect { click_button submit }.not_to change(User, :count)
+      end
+
+      describe 'after submission' do
+	before { click_button submit }
+
+	it { should have_error }
       end
     end
 
@@ -21,11 +29,11 @@ describe "UserPages" do
       end
 
       it 'should create a user' do
-	expect { click_button 'Sign up' }.to change(User, :count).by(1)
+	expect { click_button submit }.to change(User, :count).by(1)
       end
 
       describe 'after saving the user' do
-	before { click_button 'Sign up' }
+	before { click_button submit }
 
 	let(:user) { User.find_by_email('user@example.com') }
 
