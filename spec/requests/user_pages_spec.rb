@@ -60,7 +60,6 @@ describe "UserPages" do
       it { should have_content(user.email) }
       it { should have_content(user.name) }
       it { should have_button('Create board') }
-      it { should have_button('Create advertisement') }
     end
 
   end
