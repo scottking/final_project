@@ -1,398 +1,886 @@
-FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF.FFFFFFFFFFFFFFFFFFFFFFFFFFFF.FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF.FFFF
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF.FFFFFF.FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF.FFFF
 
 Failures:
 
-  1) Advertisement 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x39af668>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:8:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:10:in `block (2 levels) in <top (required)>'
+  1) StaticPages Sign in page 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_9::Nested_3:0x30a83a8>
+     # ./spec/requests/static_pages_spec.rb:31:in `block (3 levels) in <top (required)>'
 
-  2) Advertisement 
+  2) StaticPages Sign in page 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_9::Nested_3:0x315cb58>
+     # ./spec/requests/static_pages_spec.rb:31:in `block (3 levels) in <top (required)>'
+
+  3) StaticPages Sign up page 
+     Failure/Error: before { visit signup_path }
+     NameError:
+       undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_9::Nested_2:0x35dcf48>
+     # ./spec/requests/static_pages_spec.rb:24:in `block (3 levels) in <top (required)>'
+
+  4) StaticPages Sign up page 
+     Failure/Error: before { visit signup_path }
+     NameError:
+       undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_9::Nested_2:0x397ff80>
+     # ./spec/requests/static_pages_spec.rb:24:in `block (3 levels) in <top (required)>'
+
+  5) StaticPages Home page should not be accessible via some other route
+     Failure/Error: before { visit root_path }
+     NameError:
+       undefined local variable or method `root_path' for #<RSpec::Core::ExampleGroup::Nested_9::Nested_1:0x3a2e0a0>
+     # ./spec/requests/static_pages_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+  6) StaticPages Home page 
+     Failure/Error: before { visit root_path }
+     NameError:
+       undefined local variable or method `root_path' for #<RSpec::Core::ExampleGroup::Nested_9::Nested_1:0x3a481e8>
+     # ./spec/requests/static_pages_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+  7) StaticPages Home page 
+     Failure/Error: before { visit root_path }
+     NameError:
+       undefined local variable or method `root_path' for #<RSpec::Core::ExampleGroup::Nested_9::Nested_1:0x3a51728>
+     # ./spec/requests/static_pages_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+  8) AuthenticationPages sign in with valid information--different email it should behave like successful login 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_4::Nested_1:0x3b2dd78>
+     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:74
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  9) AuthenticationPages sign in with valid information--different email it should behave like successful login 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_4::Nested_1:0x3b3af78>
+     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:74
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  10) AuthenticationPages sign in with valid information--different email it should behave like successful login followed by signout 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_4::Nested_1::Nested_1:0x3b4bb50>
+     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:74
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  11) AuthenticationPages sign in with valid information--different email it should behave like successful login followed by signout 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_4::Nested_1::Nested_1:0x39a2048>
+     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:74
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  12) AuthenticationPages sign in with valid information it should behave like successful login 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_3::Nested_1:0x39b3898>
+     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:64
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  13) AuthenticationPages sign in with valid information it should behave like successful login 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_3::Nested_1:0x39c4038>
+     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:64
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  14) AuthenticationPages sign in with valid information it should behave like successful login followed by signout 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_3::Nested_1::Nested_1:0x39c9060>
+     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:64
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  15) AuthenticationPages sign in with valid information it should behave like successful login followed by signout 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_3::Nested_1::Nested_1:0x39d89d8>
+     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:64
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  16) AuthenticationPages sign in with invalid information email bad it should behave like failed login 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_2::Nested_1::Nested_1:0x3c22b00>
+     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:47
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  17) AuthenticationPages sign in with invalid information email bad it should behave like failed login 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_2::Nested_1::Nested_1:0x3c2f820>
+     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:47
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  18) AuthenticationPages sign in with invalid information email bad it should behave like failed login after visiting another page 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_2::Nested_1::Nested_1::Nested_1:0x3c36d20>
+     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:47
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  19) AuthenticationPages sign in with invalid information password bad it should behave like failed login 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_2::Nested_2::Nested_1:0x3c3f180>
+     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:56
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  20) AuthenticationPages sign in with invalid information password bad it should behave like failed login 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_2::Nested_2::Nested_1:0x3c41d78>
+     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:56
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  21) AuthenticationPages sign in with invalid information password bad it should behave like failed login after visiting another page 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_2::Nested_2::Nested_1::Nested_1:0x3c45390>
+     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:56
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  22) AuthenticationPages sign in with missing information it should behave like failed login 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_1::Nested_1:0x3c4cf20>
+     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:35
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  23) AuthenticationPages sign in with missing information it should behave like failed login 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_1::Nested_1:0x3c58368>
+     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:35
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  24) AuthenticationPages sign in with missing information it should behave like failed login after visiting another page 
+     Failure/Error: before { visit signin_path }
+     NameError:
+       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_1::Nested_1::Nested_1:0x3c5ae70>
+     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:35
+     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  25) Advertisement 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x3c53808>
+       undefined method `password=' for #<User:0x3c7c200>
      # C:in `object'
      # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
      # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
      # ./spec/models/advertisement_spec.rb:8:in `block (2 levels) in <top (required)>'
      # ./spec/models/advertisement_spec.rb:17:in `block (2 levels) in <top (required)>'
 
-  3) Advertisement 
+  26) Advertisement 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x3c55500>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:8:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:12:in `block (2 levels) in <top (required)>'
-
-  4) Advertisement 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c5d720>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:8:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:16:in `block (2 levels) in <top (required)>'
-
-  5) Advertisement 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c69a38>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:8:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:13:in `block (2 levels) in <top (required)>'
-
-  6) Advertisement 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c72540>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:8:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:15:in `block (2 levels) in <top (required)>'
-
-  7) Advertisement 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c74e98>
+       undefined method `password=' for #<User:0x4335240>
      # C:in `object'
      # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
      # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
      # ./spec/models/advertisement_spec.rb:8:in `block (2 levels) in <top (required)>'
      # ./spec/models/advertisement_spec.rb:14:in `block (2 levels) in <top (required)>'
 
-  8) Advertisement 
+  27) Advertisement 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x3c7e438>
+       undefined method `password=' for #<User:0x4c71ff0>
      # C:in `object'
      # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
      # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
      # ./spec/models/advertisement_spec.rb:8:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:18:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:10:in `block (2 levels) in <top (required)>'
 
-  9) Advertisement 
+  28) Advertisement 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x3c86f70>
+       undefined method `password=' for #<User:0x4c81620>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:16:in `block (2 levels) in <top (required)>'
+
+  29) Advertisement 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4c8dab8>
      # C:in `object'
      # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
      # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
      # ./spec/models/advertisement_spec.rb:8:in `block (2 levels) in <top (required)>'
      # ./spec/models/advertisement_spec.rb:11:in `block (2 levels) in <top (required)>'
 
-  10) Advertisement accessible attributes should not allow access to user_id
+  30) Advertisement 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4ca0b80>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:13:in `block (2 levels) in <top (required)>'
+
+  31) Advertisement 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4cac598>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:15:in `block (2 levels) in <top (required)>'
+
+  32) Advertisement 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4cb82c8>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+  33) Advertisement 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4cbbce8>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:18:in `block (2 levels) in <top (required)>'
+
+  34) Advertisement accessible attributes should not allow access to user_id
      Failure/Error: expect do
-       expected ActiveModel::MassAssignmentSecurity::Error, got #<NoMethodError: undefined method `password=' for #<User:0x3c9bef8>>
+       expected ActiveModel::MassAssignmentSecurity::Error, got #<NoMethodError: undefined method `password=' for #<User:0x4d06fb8>>
      # ./spec/models/advertisement_spec.rb:22:in `block (3 levels) in <top (required)>'
 
-  11) Advertisement accessible attributes should not allow access to board_id
+  35) Advertisement accessible attributes should not allow access to board_id
      Failure/Error: expect do
-       expected ActiveModel::MassAssignmentSecurity::Error, got #<NoMethodError: undefined method `password=' for #<User:0x4ccdca0>>
+       expected ActiveModel::MassAssignmentSecurity::Error, got #<NoMethodError: undefined method `password=' for #<User:0x4e361b0>>
      # ./spec/models/advertisement_spec.rb:28:in `block (3 levels) in <top (required)>'
 
-  12) Advertisement validating attributes x_location nil 
+  36) Advertisement validating attributes width negative 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4ce7e30>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:37:in `block (5 levels) in <top (required)>'
-
-  13) Advertisement validating attributes x_location blank 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4ceb2f8>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:43:in `block (5 levels) in <top (required)>'
-
-  14) Advertisement validating attributes x_location text 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4cf46d0>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:49:in `block (5 levels) in <top (required)>'
-
-  15) Advertisement validating attributes x_location larger than board width 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4cfb030>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:62:in `block (5 levels) in <top (required)>'
-
-  16) Advertisement validating attributes x_location negative 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4d28078>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:55:in `block (5 levels) in <top (required)>'
-
-  17) Advertisement validating attributes y_location larger than board height 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4d3f718>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:88:in `block (5 levels) in <top (required)>'
-
-  18) Advertisement validating attributes y_location negative 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4d54b80>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:81:in `block (5 levels) in <top (required)>'
-
-  19) Advertisement validating attributes height larger than board height 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4d67540>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:114:in `block (5 levels) in <top (required)>'
-
-  20) Advertisement validating attributes height negative 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4e26dc0>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:107:in `block (5 levels) in <top (required)>'
-
-  21) Advertisement validating attributes x_location & width combined larger than board width 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4e41838>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:159:in `block (5 levels) in <top (required)>'
-
-  22) Advertisement validating attributes image nil 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4e44d00>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:150:in `block (5 levels) in <top (required)>'
-
-  23) Advertisement validating attributes width larger than board width 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4e67fc8>
-     # C:in `object'
-     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/advertisement_spec.rb:140:in `block (5 levels) in <top (required)>'
-
-  24) Advertisement validating attributes width negative 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4e7bfc0>
+       undefined method `password=' for #<User:0x4e50130>
      # C:in `object'
      # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
      # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
      # ./spec/models/advertisement_spec.rb:133:in `block (5 levels) in <top (required)>'
 
-  25) Advertisement validating attributes y_location & height combined larger than board height 
+  37) Advertisement validating attributes width larger than board width 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4e87a38>
+       undefined method `password=' for #<User:0x4e51f00>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:140:in `block (5 levels) in <top (required)>'
+
+  38) Advertisement validating attributes x_location negative 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4e6c4f8>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:55:in `block (5 levels) in <top (required)>'
+
+  39) Advertisement validating attributes x_location blank 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4e6f030>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:43:in `block (5 levels) in <top (required)>'
+
+  40) Advertisement validating attributes x_location nil 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4e716e8>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:37:in `block (5 levels) in <top (required)>'
+
+  41) Advertisement validating attributes x_location text 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4e84e70>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:49:in `block (5 levels) in <top (required)>'
+
+  42) Advertisement validating attributes x_location larger than board width 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4e88ed8>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:62:in `block (5 levels) in <top (required)>'
+
+  43) Advertisement validating attributes height negative 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4e8c898>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:107:in `block (5 levels) in <top (required)>'
+
+  44) Advertisement validating attributes height larger than board height 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4e90570>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:114:in `block (5 levels) in <top (required)>'
+
+  45) Advertisement validating attributes y_location negative 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4ea00b0>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:81:in `block (5 levels) in <top (required)>'
+
+  46) Advertisement validating attributes y_location larger than board height 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4eb30d0>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:88:in `block (5 levels) in <top (required)>'
+
+  47) Advertisement validating attributes y_location & height combined larger than board height 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4eb6490>
      # C:in `object'
      # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
      # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
      # ./spec/models/advertisement_spec.rb:171:in `block (5 levels) in <top (required)>'
 
-  26) StaticPages Home page 
-     Failure/Error: before { visit root_path }
-     NameError:
-       undefined local variable or method `root_path' for #<RSpec::Core::ExampleGroup::Nested_9::Nested_1:0x4e8d558>
-     # ./spec/requests/static_pages_spec.rb:7:in `block (3 levels) in <top (required)>'
+  48) Advertisement validating attributes x_location & width combined larger than board width 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4eea108>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:159:in `block (5 levels) in <top (required)>'
 
-  27) StaticPages Home page 
-     Failure/Error: before { visit root_path }
-     NameError:
-       undefined local variable or method `root_path' for #<RSpec::Core::ExampleGroup::Nested_9::Nested_1:0x4e8ade0>
-     # ./spec/requests/static_pages_spec.rb:7:in `block (3 levels) in <top (required)>'
+  49) Advertisement validating attributes image nil 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4ef5d00>
+     # C:in `object'
+     # ./spec/models/advertisement_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/advertisement_spec.rb:150:in `block (5 levels) in <top (required)>'
 
-  28) StaticPages Home page should not be accessible via some other route
-     Failure/Error: before { visit root_path }
-     NameError:
-       undefined local variable or method `root_path' for #<RSpec::Core::ExampleGroup::Nested_9::Nested_1:0x4e90288>
-     # ./spec/requests/static_pages_spec.rb:7:in `block (3 levels) in <top (required)>'
-
-  29) StaticPages Sign up page 
-     Failure/Error: before { visit signup_path }
-     NameError:
-       undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_9::Nested_2:0x4ea5240>
-     # ./spec/requests/static_pages_spec.rb:24:in `block (3 levels) in <top (required)>'
-
-  30) StaticPages Sign up page 
-     Failure/Error: before { visit signup_path }
-     NameError:
-       undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_9::Nested_2:0x4ea9b60>
-     # ./spec/requests/static_pages_spec.rb:24:in `block (3 levels) in <top (required)>'
-
-  31) StaticPages Sign in page 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_9::Nested_3:0x4ea66e0>
-     # ./spec/requests/static_pages_spec.rb:31:in `block (3 levels) in <top (required)>'
-
-  32) StaticPages Sign in page 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_9::Nested_3:0x4ebee78>
-     # ./spec/requests/static_pages_spec.rb:31:in `block (3 levels) in <top (required)>'
-
-  33) BoardPages listing should list all the boards
+  50) BoardPages listing should list all the boards
      Failure/Error: 30.times { FactoryGirl.create(:board) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4eee4a0>
+       undefined method `password=' for #<User:0x4f280e8>
      # C:in `object'
      # C:in `object'
      # ./spec/requests/board_pages_spec.rb:9:in `block (4 levels) in <top (required)>'
      # ./spec/requests/board_pages_spec.rb:9:in `times'
      # ./spec/requests/board_pages_spec.rb:9:in `block (3 levels) in <top (required)>'
 
-  34) BoardPages display 
+  51) BoardPages display 
      Failure/Error: let(:board) { FactoryGirl.create(:board) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4eee6b0>
+       undefined method `password=' for #<User:0x4f2a260>
      # C:in `object'
      # C:in `object'
      # ./spec/requests/board_pages_spec.rb:19:in `block (3 levels) in <top (required)>'
      # ./spec/requests/board_pages_spec.rb:21:in `block (3 levels) in <top (required)>'
 
-  35) BoardPages display 
+  52) BoardPages display 
      Failure/Error: let(:board) { FactoryGirl.create(:board) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4f006f8>
+       undefined method `password=' for #<User:0x4f33530>
      # C:in `object'
      # C:in `object'
      # ./spec/requests/board_pages_spec.rb:19:in `block (3 levels) in <top (required)>'
      # ./spec/requests/board_pages_spec.rb:21:in `block (3 levels) in <top (required)>'
 
-  36) BoardPages display 
+  53) BoardPages display 
      Failure/Error: let(:board) { FactoryGirl.create(:board) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4f03080>
+       undefined method `password=' for #<User:0x4f3de98>
      # C:in `object'
      # C:in `object'
      # ./spec/requests/board_pages_spec.rb:19:in `block (3 levels) in <top (required)>'
      # ./spec/requests/board_pages_spec.rb:21:in `block (3 levels) in <top (required)>'
 
-  37) BoardPages display 
+  54) BoardPages display 
      Failure/Error: let(:board) { FactoryGirl.create(:board) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4f11c48>
+       undefined method `password=' for #<User:0x4f48890>
      # C:in `object'
      # C:in `object'
      # ./spec/requests/board_pages_spec.rb:19:in `block (3 levels) in <top (required)>'
      # ./spec/requests/board_pages_spec.rb:21:in `block (3 levels) in <top (required)>'
 
-  38) BoardPages display 
+  55) BoardPages display 
      Failure/Error: let(:board) { FactoryGirl.create(:board) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4f24548>
+       undefined method `password=' for #<User:0x4f53990>
      # C:in `object'
      # C:in `object'
      # ./spec/requests/board_pages_spec.rb:19:in `block (3 levels) in <top (required)>'
      # ./spec/requests/board_pages_spec.rb:21:in `block (3 levels) in <top (required)>'
 
-  39) BoardPages display 
+  56) BoardPages display 
      Failure/Error: let(:board) { FactoryGirl.create(:board) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4f5ddb8>
+       undefined method `password=' for #<User:0x4f5cab0>
      # C:in `object'
      # C:in `object'
      # ./spec/requests/board_pages_spec.rb:19:in `block (3 levels) in <top (required)>'
      # ./spec/requests/board_pages_spec.rb:21:in `block (3 levels) in <top (required)>'
 
-  40) Tile 
+  57) Board 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4f611a8>
+       undefined method `password=' for #<User:0x4f5fc48>
      # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:9:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:11:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:12:in `block (2 levels) in <top (required)>'
 
-  41) Tile 
+  58) Board 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4f6d730>
+       undefined method `password=' for #<User:0x4f94070>
      # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:9:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:12:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:10:in `block (2 levels) in <top (required)>'
 
-  42) Tile 
+  59) Board 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4f79bc8>
+       undefined method `password=' for #<User:0x4f986c0>
      # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:9:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:13:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:9:in `block (2 levels) in <top (required)>'
 
-  43) Tile 
+  60) Board 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4f8e400>
+       undefined method `password=' for #<User:0x4facbe0>
      # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:9:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:15:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:11:in `block (2 levels) in <top (required)>'
 
-  44) Tile 
+  61) Board 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4f8aef0>
+       undefined method `password=' for #<User:0x4fa9628>
      # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:9:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:16:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:13:in `block (2 levels) in <top (required)>'
 
-  45) Tile 
+  62) Board accessible attributes should not allow access to user_id
+     Failure/Error: expect do
+       expected ActiveModel::MassAssignmentSecurity::Error, got #<NoMethodError: undefined method `password=' for #<User:0x4fb5ca0>>
+     # ./spec/models/board_spec.rb:17:in `block (3 levels) in <top (required)>'
+
+  63) Board validating attributes timezone garbage 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4f92870>
+       undefined method `password=' for #<User:0x4fc3e90>
+     # C:in `object'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:116:in `block (5 levels) in <top (required)>'
+
+  64) Board validating attributes timezone blank 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4fc6a40>
+     # C:in `object'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:110:in `block (5 levels) in <top (required)>'
+
+  65) Board validating attributes timezone nil 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4ffc638>
+     # C:in `object'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:104:in `block (5 levels) in <top (required)>'
+
+  66) Board validating attributes width negative 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4ffe9c0>
+     # C:in `object'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:90:in `block (5 levels) in <top (required)>'
+
+  67) Board validating attributes width blank 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x5029458>
+     # C:in `object'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:78:in `block (5 levels) in <top (required)>'
+
+  68) Board validating attributes width nil 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x5033ce8>
+     # C:in `object'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:72:in `block (5 levels) in <top (required)>'
+
+  69) Board validating attributes width text 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x503a270>
+     # C:in `object'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:84:in `block (5 levels) in <top (required)>'
+
+  70) Board validating attributes width zero 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x5160990>
+     # C:in `object'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:96:in `block (5 levels) in <top (required)>'
+
+  71) Board validating attributes height negative 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x5185368>
+     # C:in `object'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:58:in `block (5 levels) in <top (required)>'
+
+  72) Board validating attributes height blank 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x518a078>
+     # C:in `object'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:46:in `block (5 levels) in <top (required)>'
+
+  73) Board validating attributes height nil 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x5186d90>
+     # C:in `object'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:40:in `block (5 levels) in <top (required)>'
+
+  74) Board validating attributes height text 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x518baa0>
+     # C:in `object'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:52:in `block (5 levels) in <top (required)>'
+
+  75) Board validating attributes height zero 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x51907b0>
+     # C:in `object'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:64:in `block (5 levels) in <top (required)>'
+
+  76) Board validating attributes name nil 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x5195190>
+     # C:in `object'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:26:in `block (5 levels) in <top (required)>'
+
+  77) Board validating attributes name blank 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x5199ea0>
+     # C:in `object'
+     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/board_spec.rb:32:in `block (5 levels) in <top (required)>'
+
+  78) User 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x51a6140>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:18:in `block (2 levels) in <top (required)>'
+
+  79) User 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x51a33f8>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:14:in `block (2 levels) in <top (required)>'
+
+  80) User 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x51a86a8>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:8:in `block (2 levels) in <top (required)>'
+
+  81) User 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x51ad958>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:16:in `block (2 levels) in <top (required)>'
+
+  82) User 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x51d2c18>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:9:in `block (2 levels) in <top (required)>'
+
+  83) User 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x51cfed0>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+  84) User 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x51d5180>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:15:in `block (2 levels) in <top (required)>'
+
+  85) User 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x51da430>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:13:in `block (2 levels) in <top (required)>'
+
+  86) User 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x51d76e8>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:19:in `block (2 levels) in <top (required)>'
+
+  87) User 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x51fc990>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:20:in `block (2 levels) in <top (required)>'
+
+  88) User 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x5201c40>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:10:in `block (2 levels) in <top (required)>'
+
+  89) User supports authentication with valid password 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x5216958>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:128:in `block (4 levels) in <top (required)>'
+
+  90) User supports authentication with invalid password 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x52137a8>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:134:in `block (4 levels) in <top (required)>'
+
+  91) User supports authentication with invalid password 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x52189f8>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:125:in `block (3 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:132:in `block (4 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:135:in `block (4 levels) in <top (required)>'
+
+  92) User administrator 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x522e778>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:115:in `block (3 levels) in <top (required)>'
+
+  93) User administrator can be turned on explicitly 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x522b688>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:118:in `block (4 levels) in <top (required)>'
+
+  94) User validating attributes remember_token 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x5230128>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:110:in `block (4 levels) in <top (required)>'
+
+  95) User validating attributes password and confirmation not matching 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x5234d60>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:101:in `block (5 levels) in <top (required)>'
+
+  96) User validating attributes password and confirmation too short 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x5239b00>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:94:in `block (5 levels) in <top (required)>'
+
+  97) User validating attributes password and confirmation blank 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x5246898>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:88:in `block (5 levels) in <top (required)>'
+
+  98) User validating attributes password and confirmation nil 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x5243640>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:82:in `block (5 levels) in <top (required)>'
+
+  99) User validating attributes email already in use 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x52480b0>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:72:in `block (5 levels) in <top (required)>'
+
+  100) User validating attributes email blank 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x524ce50>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:65:in `block (5 levels) in <top (required)>'
+
+  101) User validating attributes email nil 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x5251bf0>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:59:in `block (5 levels) in <top (required)>'
+
+  102) User validating attributes name nil 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x526e660>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:45:in `block (5 levels) in <top (required)>'
+
+  103) User validating attributes name blank 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x526b408>
+     # C:in `object'
+     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/user_spec.rb:51:in `block (5 levels) in <top (required)>'
+
+  104) User accessible attributes should not allow access to remember_token
+     Failure/Error: expect do
+       expected ActiveModel::MassAssignmentSecurity::Error but nothing was raised
+     # ./spec/models/user_spec.rb:36:in `block (3 levels) in <top (required)>'
+
+  105) User accessible attributes should not allow access to password_digest
+     Failure/Error: expect do
+       expected ActiveModel::MassAssignmentSecurity::Error but nothing was raised
+     # ./spec/models/user_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+  106) Tile 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x52a0dd8>
      # C:in `object'
      # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
      # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
@@ -400,899 +888,411 @@ Failures:
      # ./spec/models/tile_spec.rb:9:in `block (2 levels) in <top (required)>'
      # ./spec/models/tile_spec.rb:14:in `block (2 levels) in <top (required)>'
 
-  46) Tile accessible attributes should not allow access to board_id
-     Failure/Error: expect do
-       expected ActiveModel::MassAssignmentSecurity::Error, got #<NoMethodError: undefined method `password=' for #<User:0x4f9d9b8>>
-     # ./spec/models/tile_spec.rb:20:in `block (3 levels) in <top (required)>'
+  107) Tile 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x52a5f68>
+     # C:in `object'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:9:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:11:in `block (2 levels) in <top (required)>'
 
-  47) Tile accessible attributes should not allow access to advertisement_id
+  108) Tile 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x52a3100>
+     # C:in `object'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:9:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:13:in `block (2 levels) in <top (required)>'
+
+  109) Tile 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x52b8280>
+     # C:in `object'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:9:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+  110) Tile 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x52dd420>
+     # C:in `object'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:9:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:15:in `block (2 levels) in <top (required)>'
+
+  111) Tile 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x52e25b0>
+     # C:in `object'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:9:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:16:in `block (2 levels) in <top (required)>'
+
+  112) Tile accessible attributes should not allow access to advertisement_id
      Failure/Error: expect do
-       expected ActiveModel::MassAssignmentSecurity::Error, got #<NoMethodError: undefined method `password=' for #<User:0x4fa9418>>
+       expected ActiveModel::MassAssignmentSecurity::Error, got #<NoMethodError: undefined method `password=' for #<User:0x5308c38>>
      # ./spec/models/tile_spec.rb:26:in `block (3 levels) in <top (required)>'
 
-  48) Tile validating attributes x_location nil 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4fcc590>
-     # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:53:in `block (5 levels) in <top (required)>'
+  113) Tile accessible attributes should not allow access to board_id
+     Failure/Error: expect do
+       expected ActiveModel::MassAssignmentSecurity::Error, got #<NoMethodError: undefined method `password=' for #<User:0x5315508>>
+     # ./spec/models/tile_spec.rb:20:in `block (3 levels) in <top (required)>'
 
-  49) Tile validating attributes x_location blank 
+  114) Tile validating attributes cost negative 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4fd77b0>
-     # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:59:in `block (5 levels) in <top (required)>'
-
-  50) Tile validating attributes x_location text 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4fdae70>
-     # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:65:in `block (5 levels) in <top (required)>'
-
-  51) Tile validating attributes x_location smaller than ad x_location 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4fdeb78>
-     # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:87:in `block (5 levels) in <top (required)>'
-
-  52) Tile validating attributes x_location larger than board width 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4ff2b40>
-     # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:78:in `block (5 levels) in <top (required)>'
-
-  53) Tile validating attributes x_location negative 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4ff6770>
-     # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:71:in `block (5 levels) in <top (required)>'
-
-  54) Tile validating attributes x_location past end of ad width 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x5002d40>
-     # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:96:in `block (5 levels) in <top (required)>'
-
-  55) Tile validating attributes y_location nil 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x500ecf8>
-     # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:107:in `block (5 levels) in <top (required)>'
-
-  56) Tile validating attributes y_location blank 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x501a410>
-     # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:113:in `block (5 levels) in <top (required)>'
-
-  57) Tile validating attributes y_location smaller than ad y_location 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x501c780>
-     # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:139:in `block (5 levels) in <top (required)>'
-
-  58) Tile validating attributes y_location larger than board height 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x5042c88>
-     # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:130:in `block (5 levels) in <top (required)>'
-
-  59) Tile validating attributes y_location negative 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x507c840>
-     # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:123:in `block (5 levels) in <top (required)>'
-
-  60) Tile validating attributes y_location past end of ad height 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x5097480>
-     # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:148:in `block (5 levels) in <top (required)>'
-
-  61) Tile validating attributes cost nil 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x50a1e00>
-     # C:in `object'
-     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/tile_spec.rb:159:in `block (5 levels) in <top (required)>'
-
-  62) Tile validating attributes cost negative 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x50a7908>
+       undefined method `password=' for #<User:0x5319540>
      # C:in `object'
      # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
      # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
      # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
      # ./spec/models/tile_spec.rb:177:in `block (5 levels) in <top (required)>'
 
-  63) Tile validating attributes cost text 
+  115) Tile validating attributes cost text 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x51d1fb8>
+       undefined method `password=' for #<User:0x531e1c0>
      # C:in `object'
      # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
      # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
      # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
      # ./spec/models/tile_spec.rb:171:in `block (5 levels) in <top (required)>'
 
-  64) Tile validating attributes cost blank 
+  116) Tile validating attributes cost blank 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x51d6c38>
+       undefined method `password=' for #<User:0x5315808>
      # C:in `object'
      # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
      # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
      # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
      # ./spec/models/tile_spec.rb:165:in `block (5 levels) in <top (required)>'
 
-  65) User 
+  117) Tile validating attributes cost nil 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x51eae88>
+       undefined method `password=' for #<User:0x52487a0>
      # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:159:in `block (5 levels) in <top (required)>'
 
-  66) User 
+  118) Tile validating attributes y_location negative 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x51e8140>
+       undefined method `password=' for #<User:0x51d5600>
      # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:19:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:123:in `block (5 levels) in <top (required)>'
 
-  67) User 
+  119) Tile validating attributes y_location nil 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x51f5400>
+       undefined method `password=' for #<User:0x5161c98>
      # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:18:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:107:in `block (5 levels) in <top (required)>'
 
-  68) User 
+  120) Tile validating attributes y_location blank 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x51fa680>
+       undefined method `password=' for #<User:0x4f58cb8>
      # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:12:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:113:in `block (5 levels) in <top (required)>'
 
-  69) User 
+  121) Tile validating attributes y_location past end of ad height 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x51ff930>
+       undefined method `password=' for #<User:0x4ea0560>
      # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:13:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:148:in `block (5 levels) in <top (required)>'
 
-  70) User 
+  122) Tile validating attributes y_location smaller than ad y_location 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x51fcbe8>
+       undefined method `password=' for #<User:0x4d3f490>
      # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:16:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:139:in `block (5 levels) in <top (required)>'
 
-  71) User 
+  123) Tile validating attributes y_location larger than board height 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x5201e98>
+       undefined method `password=' for #<User:0x3ca3920>
      # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:15:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:130:in `block (5 levels) in <top (required)>'
 
-  72) User 
+  124) Tile validating attributes x_location negative 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x5207148>
+       undefined method `password=' for #<User:0x3991680>
      # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:20:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:71:in `block (5 levels) in <top (required)>'
 
-  73) User 
+  125) Tile validating attributes x_location nil 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x5204400>
+       undefined method `password=' for #<User:0x30a8528>
      # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:9:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:53:in `block (5 levels) in <top (required)>'
 
-  74) User 
+  126) Tile validating attributes x_location text 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x52296a8>
+       undefined method `password=' for #<User:0x30b37f0>
      # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:10:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:65:in `block (5 levels) in <top (required)>'
 
-  75) User 
+  127) Tile validating attributes x_location blank 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x5236950>
+       undefined method `password=' for #<User:0x3105840>
      # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:14:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:59:in `block (5 levels) in <top (required)>'
 
-  76) User accessible attributes should not allow access to password_digest
-     Failure/Error: expect do
-       expected ActiveModel::MassAssignmentSecurity::Error but nothing was raised
-     # ./spec/models/user_spec.rb:30:in `block (3 levels) in <top (required)>'
-
-  77) User accessible attributes should not allow access to remember_token
-     Failure/Error: expect do
-       expected ActiveModel::MassAssignmentSecurity::Error but nothing was raised
-     # ./spec/models/user_spec.rb:36:in `block (3 levels) in <top (required)>'
-
-  78) User supports authentication with valid password 
+  128) Tile validating attributes x_location past end of ad width 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x5254e90>
+       undefined method `password=' for #<User:0x3592470>
      # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:128:in `block (4 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:96:in `block (5 levels) in <top (required)>'
 
-  79) User supports authentication with invalid password 
+  129) Tile validating attributes x_location smaller than ad x_location 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x5259cd8>
+       undefined method `password=' for #<User:0x3990b58>
      # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:134:in `block (4 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:87:in `block (5 levels) in <top (required)>'
 
-  80) User supports authentication with invalid password 
+  130) Tile validating attributes x_location larger than board width 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x525ef28>
+       undefined method `password=' for #<User:0x3a4c508>
      # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:125:in `block (3 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:132:in `block (4 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:135:in `block (4 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:4:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:6:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:7:in `block (2 levels) in <top (required)>'
+     # ./spec/models/tile_spec.rb:78:in `block (5 levels) in <top (required)>'
 
-  81) User administrator 
+  131) AuthorizationPages user profile access by different user 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x528ccf0>
-     # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:6:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:115:in `block (3 levels) in <top (required)>'
-
-  82) User administrator can be turned on explicitly 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x52a1be8>
-     # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:118:in `block (4 levels) in <top (required)>'
-
-  83) User validating attributes name nil 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x52a6430>
-     # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:45:in `block (5 levels) in <top (required)>'
-
-  84) User validating attributes name blank 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x52ab1d0>
-     # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:51:in `block (5 levels) in <top (required)>'
-
-  85) User validating attributes remember_token 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x52afec8>
-     # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:110:in `block (4 levels) in <top (required)>'
-
-  86) User validating attributes password and confirmation nil 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x52acb08>
-     # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:82:in `block (5 levels) in <top (required)>'
-
-  87) User validating attributes password and confirmation not matching 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x52b18a8>
-     # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:101:in `block (5 levels) in <top (required)>'
-
-  88) User validating attributes password and confirmation too short 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x52b6648>
-     # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:94:in `block (5 levels) in <top (required)>'
-
-  89) User validating attributes password and confirmation blank 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x52bb3e8>
-     # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:88:in `block (5 levels) in <top (required)>'
-
-  90) User validating attributes email nil 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x52bfe58>
-     # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:59:in `block (5 levels) in <top (required)>'
-
-  91) User validating attributes email blank 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x52bcc00>
-     # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:65:in `block (5 levels) in <top (required)>'
-
-  92) User validating attributes email already in use 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x52c19a0>
-     # C:in `object'
-     # ./spec/models/user_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/user_spec.rb:72:in `block (5 levels) in <top (required)>'
-
-  93) AuthorizationPages user profile access by different user 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x52c5ee8>
+       undefined method `password=' for #<User:0x3b2e078>
      # C:in `object'
      # ./spec/requests/authorization_pages_spec.rb:7:in `block (3 levels) in <top (required)>'
      # ./spec/requests/authorization_pages_spec.rb:11:in `block (3 levels) in <top (required)>'
 
-  94) AuthorizationPages user listing before signing in 
+  132) AuthorizationPages user listing before signing in 
      Failure/Error: before { visit users_path }
      NameError:
-       undefined local variable or method `users_path' for #<RSpec::Core::ExampleGroup::Nested_7::Nested_2::Nested_1:0x52c41c0>
+       undefined local variable or method `users_path' for #<RSpec::Core::ExampleGroup::Nested_7::Nested_2::Nested_1:0x3b3a1f8>
      # ./spec/requests/authorization_pages_spec.rb:21:in `block (4 levels) in <top (required)>'
 
-  95) AuthorizationPages user listing signed in as regular user 
+  133) AuthorizationPages user listing signed in as regular user 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x52c83f0>
+       undefined method `password=' for #<User:0x39a7e68>
      # C:in `object'
      # ./spec/requests/authorization_pages_spec.rb:28:in `block (4 levels) in <top (required)>'
      # ./spec/requests/authorization_pages_spec.rb:31:in `block (4 levels) in <top (required)>'
 
-  96) AuthenticationPages sign in with missing information it should behave like failed login 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_1::Nested_1:0x52cd970>
-     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:35
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+  134) UserPages user listing signed in as administrator shouldn't allow self to be deleted
+     Failure/Error: let!(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x39cc990>
+     # C:in `object'
+     # ./spec/requests/user_pages_spec.rb:63:in `block (4 levels) in <top (required)>'
 
-  97) AuthenticationPages sign in with missing information it should behave like failed login 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_1::Nested_1:0x52d37d8>
-     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:35
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+  135) UserPages user listing signed in as administrator 
+     Failure/Error: let!(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x39d5f00>
+     # C:in `object'
+     # ./spec/requests/user_pages_spec.rb:63:in `block (4 levels) in <top (required)>'
 
-  98) AuthenticationPages sign in with missing information it should behave like failed login after visiting another page 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_1::Nested_1::Nested_1:0x52d14e0>
-     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:35
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+  136) UserPages user listing signed in as administrator should list all the users
+     Failure/Error: let!(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x3c298f8>
+     # C:in `object'
+     # ./spec/requests/user_pages_spec.rb:63:in `block (4 levels) in <top (required)>'
 
-  99) AuthenticationPages sign in with valid information--different email it should behave like successful login 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_4::Nested_1:0x5316be8>
-     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:74
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+  137) UserPages user listing signed in as administrator 
+     Failure/Error: let!(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x3c3aa70>
+     # C:in `object'
+     # ./spec/requests/user_pages_spec.rb:63:in `block (4 levels) in <top (required)>'
 
-  100) AuthenticationPages sign in with valid information--different email it should behave like successful login 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_4::Nested_1:0x5314a58>
-     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:74
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+  138) UserPages user listing signed in as administrator should remove a user on deletion
+     Failure/Error: let!(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x3c420d8>
+     # C:in `object'
+     # ./spec/requests/user_pages_spec.rb:63:in `block (4 levels) in <top (required)>'
 
-  101) AuthenticationPages sign in with valid information--different email it should behave like successful login followed by signout 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_4::Nested_1::Nested_1:0x533a750>
-     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:74
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+  139) UserPages profile 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x3c4ea68>
+     # C:in `object'
+     # ./spec/requests/user_pages_spec.rb:39:in `block (3 levels) in <top (required)>'
+     # ./spec/requests/user_pages_spec.rb:41:in `block (3 levels) in <top (required)>'
 
-  102) AuthenticationPages sign in with valid information--different email it should behave like successful login followed by signout 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_4::Nested_1::Nested_1:0x5338560>
-     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:74
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+  140) UserPages profile after signing in 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x3c56da8>
+     # C:in `object'
+     # ./spec/requests/user_pages_spec.rb:39:in `block (3 levels) in <top (required)>'
+     # ./spec/requests/user_pages_spec.rb:41:in `block (3 levels) in <top (required)>'
 
-  103) AuthenticationPages sign in with valid information it should behave like successful login 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_3::Nested_1:0x533dd68>
-     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:64
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+  141) UserPages profile after signing in 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x3c623b8>
+     # C:in `object'
+     # ./spec/requests/user_pages_spec.rb:39:in `block (3 levels) in <top (required)>'
+     # ./spec/requests/user_pages_spec.rb:41:in `block (3 levels) in <top (required)>'
 
-  104) AuthenticationPages sign in with valid information it should behave like successful login 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_3::Nested_1:0x5343bd0>
-     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:64
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+  142) UserPages profile after signing in 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x3c6f720>
+     # C:in `object'
+     # ./spec/requests/user_pages_spec.rb:39:in `block (3 levels) in <top (required)>'
+     # ./spec/requests/user_pages_spec.rb:41:in `block (3 levels) in <top (required)>'
 
-  105) AuthenticationPages sign in with valid information it should behave like successful login followed by signout 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_3::Nested_1::Nested_1:0x53418d8>
-     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:64
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
+  143) UserPages profile after signing in 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x3c77bc8>
+     # C:in `object'
+     # ./spec/requests/user_pages_spec.rb:39:in `block (3 levels) in <top (required)>'
+     # ./spec/requests/user_pages_spec.rb:41:in `block (3 levels) in <top (required)>'
 
-  106) AuthenticationPages sign in with valid information it should behave like successful login followed by signout 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_3::Nested_1::Nested_1:0x53476e0>
-     Shared Example Group: "successful login" called from ./spec/requests/authentication_pages_spec.rb:64
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
-
-  107) AuthenticationPages sign in with invalid information email bad it should behave like failed login 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_2::Nested_1::Nested_1:0x5344c80>
-     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:47
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
-
-  108) AuthenticationPages sign in with invalid information email bad it should behave like failed login 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_2::Nested_1::Nested_1:0x534aaa0>
-     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:47
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
-
-  109) AuthenticationPages sign in with invalid information email bad it should behave like failed login after visiting another page 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_2::Nested_1::Nested_1::Nested_1:0x5348760>
-     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:47
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
-
-  110) AuthenticationPages sign in with invalid information password bad it should behave like failed login 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_2::Nested_2::Nested_1:0x534de18>
-     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:56
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
-
-  111) AuthenticationPages sign in with invalid information password bad it should behave like failed login 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_2::Nested_2::Nested_1:0x5363c40>
-     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:56
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
-
-  112) AuthenticationPages sign in with invalid information password bad it should behave like failed login after visiting another page 
-     Failure/Error: before { visit signin_path }
-     NameError:
-       undefined local variable or method `signin_path' for #<RSpec::Core::ExampleGroup::Nested_6::Nested_1::Nested_2::Nested_2::Nested_1::Nested_1:0x5361900>
-     Shared Example Group: "failed login" called from ./spec/requests/authentication_pages_spec.rb:56
-     # ./spec/requests/authentication_pages_spec.rb:30:in `block (3 levels) in <top (required)>'
-
-  113) UserPages signup with invalid information should not create a user
+  144) UserPages signup with invalid information should not create a user
      Failure/Error: before { visit signup_path }
      NameError:
-       undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_10::Nested_1::Nested_1:0x53867b8>
+       undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_10::Nested_1::Nested_1:0x3c7b828>
      # ./spec/requests/user_pages_spec.rb:7:in `block (3 levels) in <top (required)>'
 
-  114) UserPages signup with valid information should create a user
+  145) UserPages signup with valid information should create a user
      Failure/Error: before { visit signup_path }
      NameError:
-       undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_10::Nested_1::Nested_2:0x5384388>
+       undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_10::Nested_1::Nested_2:0x3c84b88>
      # ./spec/requests/user_pages_spec.rb:7:in `block (3 levels) in <top (required)>'
 
-  115) UserPages signup with valid information after saving the user 
+  146) UserPages signup with valid information after saving the user 
      Failure/Error: before { visit signup_path }
      NameError:
-       undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_10::Nested_1::Nested_2::Nested_1:0x5389fe0>
+       undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_10::Nested_1::Nested_2::Nested_1:0x3c866d0>
      # ./spec/requests/user_pages_spec.rb:7:in `block (3 levels) in <top (required)>'
 
-  116) UserPages signup with valid information after saving the user 
+  147) UserPages signup with valid information after saving the user 
      Failure/Error: before { visit signup_path }
      NameError:
-       undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_10::Nested_1::Nested_2::Nested_1:0x538fe30>
+       undefined local variable or method `signup_path' for #<RSpec::Core::ExampleGroup::Nested_10::Nested_1::Nested_2::Nested_1:0x3c89fb8>
      # ./spec/requests/user_pages_spec.rb:7:in `block (3 levels) in <top (required)>'
-
-  117) UserPages profile 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x5317bd8>
-     # C:in `object'
-     # ./spec/requests/user_pages_spec.rb:39:in `block (3 levels) in <top (required)>'
-     # ./spec/requests/user_pages_spec.rb:41:in `block (3 levels) in <top (required)>'
-
-  118) UserPages profile after signing in 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x52a1e28>
-     # C:in `object'
-     # ./spec/requests/user_pages_spec.rb:39:in `block (3 levels) in <top (required)>'
-     # ./spec/requests/user_pages_spec.rb:41:in `block (3 levels) in <top (required)>'
-
-  119) UserPages profile after signing in 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x51f8be0>
-     # C:in `object'
-     # ./spec/requests/user_pages_spec.rb:39:in `block (3 levels) in <top (required)>'
-     # ./spec/requests/user_pages_spec.rb:41:in `block (3 levels) in <top (required)>'
-
-  120) UserPages profile after signing in 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x500ef68>
-     # C:in `object'
-     # ./spec/requests/user_pages_spec.rb:39:in `block (3 levels) in <top (required)>'
-     # ./spec/requests/user_pages_spec.rb:41:in `block (3 levels) in <top (required)>'
-
-  121) UserPages profile after signing in 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4f780c8>
-     # C:in `object'
-     # ./spec/requests/user_pages_spec.rb:39:in `block (3 levels) in <top (required)>'
-     # ./spec/requests/user_pages_spec.rb:41:in `block (3 levels) in <top (required)>'
-
-  122) UserPages user listing signed in as administrator should list all the users
-     Failure/Error: let!(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4ec2208>
-     # C:in `object'
-     # ./spec/requests/user_pages_spec.rb:63:in `block (4 levels) in <top (required)>'
-
-  123) UserPages user listing signed in as administrator 
-     Failure/Error: let!(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4cfcbd8>
-     # C:in `object'
-     # ./spec/requests/user_pages_spec.rb:63:in `block (4 levels) in <top (required)>'
-
-  124) UserPages user listing signed in as administrator 
-     Failure/Error: let!(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c7a1f0>
-     # C:in `object'
-     # ./spec/requests/user_pages_spec.rb:63:in `block (4 levels) in <top (required)>'
-
-  125) UserPages user listing signed in as administrator should remove a user on deletion
-     Failure/Error: let!(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x21fc888>
-     # C:in `object'
-     # ./spec/requests/user_pages_spec.rb:63:in `block (4 levels) in <top (required)>'
-
-  126) UserPages user listing signed in as administrator shouldn't allow self to be deleted
-     Failure/Error: let!(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x30fb6e8>
-     # C:in `object'
-     # ./spec/requests/user_pages_spec.rb:63:in `block (4 levels) in <top (required)>'
-
-  127) Board 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x310d2b0>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:9:in `block (2 levels) in <top (required)>'
-
-  128) Board 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x30a81b0>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:10:in `block (2 levels) in <top (required)>'
-
-  129) Board 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3958ba8>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:11:in `block (2 levels) in <top (required)>'
-
-  130) Board 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3678678>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:13:in `block (2 levels) in <top (required)>'
-
-  131) Board 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3aca4a8>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:7:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:12:in `block (2 levels) in <top (required)>'
-
-  132) Board accessible attributes should not allow access to user_id
-     Failure/Error: expect do
-       expected ActiveModel::MassAssignmentSecurity::Error, got #<NoMethodError: undefined method `password=' for #<User:0x3adc220>>
-     # ./spec/models/board_spec.rb:17:in `block (3 levels) in <top (required)>'
-
-  133) Board validating attributes name nil 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3bc3160>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:26:in `block (5 levels) in <top (required)>'
-
-  134) Board validating attributes name blank 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3be1880>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:32:in `block (5 levels) in <top (required)>'
-
-  135) Board validating attributes timezone nil 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c03900>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:104:in `block (5 levels) in <top (required)>'
-
-  136) Board validating attributes timezone blank 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c11058>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:110:in `block (5 levels) in <top (required)>'
-
-  137) Board validating attributes timezone garbage 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c22cb0>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:116:in `block (5 levels) in <top (required)>'
-
-  138) Board validating attributes width nil 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c31cb0>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:72:in `block (5 levels) in <top (required)>'
-
-  139) Board validating attributes width blank 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c3ce58>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:78:in `block (5 levels) in <top (required)>'
-
-  140) Board validating attributes width text 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c45210>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:84:in `block (5 levels) in <top (required)>'
-
-  141) Board validating attributes width zero 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c52050>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:96:in `block (5 levels) in <top (required)>'
-
-  142) Board validating attributes width negative 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c58908>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:90:in `block (5 levels) in <top (required)>'
-
-  143) Board validating attributes height nil 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c69a50>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:40:in `block (5 levels) in <top (required)>'
-
-  144) Board validating attributes height blank 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c77a00>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:46:in `block (5 levels) in <top (required)>'
-
-  145) Board validating attributes height text 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c7ede0>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:52:in `block (5 levels) in <top (required)>'
-
-  146) Board validating attributes height zero 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c84ff0>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:64:in `block (5 levels) in <top (required)>'
-
-  147) Board validating attributes height negative 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c8cec8>
-     # C:in `object'
-     # ./spec/models/board_spec.rb:4:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/board_spec.rb:58:in `block (5 levels) in <top (required)>'
 
   148) PaymentDetail 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x3c95058>
-     # C:in `object'
-     # ./spec/models/payment_detail_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/payment_detail_spec.rb:8:in `block (2 levels) in <top (required)>'
-     # ./spec/models/payment_detail_spec.rb:11:in `block (2 levels) in <top (required)>'
-
-  149) PaymentDetail 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3c9cd08>
+       undefined method `password=' for #<User:0x3c96df8>
      # C:in `object'
      # ./spec/models/payment_detail_spec.rb:5:in `block (2 levels) in <top (required)>'
      # ./spec/models/payment_detail_spec.rb:8:in `block (2 levels) in <top (required)>'
      # ./spec/models/payment_detail_spec.rb:14:in `block (2 levels) in <top (required)>'
 
-  150) PaymentDetail 
+  149) PaymentDetail 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x3ca5e88>
+       undefined method `password=' for #<User:0x3c9ee98>
      # C:in `object'
      # ./spec/models/payment_detail_spec.rb:5:in `block (2 levels) in <top (required)>'
      # ./spec/models/payment_detail_spec.rb:8:in `block (2 levels) in <top (required)>'
      # ./spec/models/payment_detail_spec.rb:13:in `block (2 levels) in <top (required)>'
 
+  150) PaymentDetail 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x3ca80a8>
+     # C:in `object'
+     # ./spec/models/payment_detail_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/payment_detail_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/models/payment_detail_spec.rb:12:in `block (2 levels) in <top (required)>'
+
   151) PaymentDetail 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x3cad640>
+       undefined method `password=' for #<User:0x3caeb40>
+     # C:in `object'
+     # ./spec/models/payment_detail_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/payment_detail_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/models/payment_detail_spec.rb:11:in `block (2 levels) in <top (required)>'
+
+  152) PaymentDetail 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x3cb64c0>
      # C:in `object'
      # ./spec/models/payment_detail_spec.rb:5:in `block (2 levels) in <top (required)>'
      # ./spec/models/payment_detail_spec.rb:9:in `block (2 levels) in <top (required)>'
      # ./spec/models/payment_detail_spec.rb:18:in `block (2 levels) in <top (required)>'
 
-  152) PaymentDetail 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x3cb5290>
-     # C:in `object'
-     # ./spec/models/payment_detail_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/payment_detail_spec.rb:9:in `block (2 levels) in <top (required)>'
-     # ./spec/models/payment_detail_spec.rb:19:in `block (2 levels) in <top (required)>'
-
   153) PaymentDetail 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x46fec90>
+       undefined method `password=' for #<User:0x46dd750>
      # C:in `object'
      # ./spec/models/payment_detail_spec.rb:5:in `block (2 levels) in <top (required)>'
      # ./spec/models/payment_detail_spec.rb:9:in `block (2 levels) in <top (required)>'
@@ -1301,161 +1301,70 @@ Failures:
   154) PaymentDetail 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x457dd18>
-     # C:in `object'
-     # ./spec/models/payment_detail_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/payment_detail_spec.rb:8:in `block (2 levels) in <top (required)>'
-     # ./spec/models/payment_detail_spec.rb:12:in `block (2 levels) in <top (required)>'
-
-  155) PaymentDetail 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4c22ef8>
+       undefined method `password=' for #<User:0x43e2f10>
      # C:in `object'
      # ./spec/models/payment_detail_spec.rb:5:in `block (2 levels) in <top (required)>'
      # ./spec/models/payment_detail_spec.rb:9:in `block (2 levels) in <top (required)>'
      # ./spec/models/payment_detail_spec.rb:17:in `block (2 levels) in <top (required)>'
 
-  156) PaymentDetail accessible attributes should not allow access to payable_id
-     Failure/Error: expect do
-       expected ActiveModel::MassAssignmentSecurity::Error, got #<NoMethodError: undefined method `password=' for #<User:0x4c96140>>
-     # ./spec/models/payment_detail_spec.rb:23:in `block (3 levels) in <top (required)>'
-
-  157) PaymentDetail accessible attributes should not allow access to user_id
-     Failure/Error: expect do
-       expected ActiveModel::MassAssignmentSecurity::Error, got #<NoMethodError: undefined method `password=' for #<User:0x4ccfd88>>
-     # ./spec/models/payment_detail_spec.rb:35:in `block (3 levels) in <top (required)>'
-
-  158) PaymentDetail validating attributes amount nil 
+  155) PaymentDetail 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4cd97d8>
-     # C:in `object'
-     # ./spec/models/payment_detail_spec.rb:5:in `block (2 levels) in <top (required)>'
-     # ./spec/models/payment_detail_spec.rb:8:in `block (2 levels) in <top (required)>'
-     # ./spec/models/payment_detail_spec.rb:44:in `block (5 levels) in <top (required)>'
-
-  159) PaymentDetail validating attributes amount blank 
-     Failure/Error: let(:user) { FactoryGirl.create(:user) }
-     NoMethodError:
-       undefined method `password=' for #<User:0x4cebca0>
+       undefined method `password=' for #<User:0x444c168>
      # C:in `object'
      # ./spec/models/payment_detail_spec.rb:5:in `block (2 levels) in <top (required)>'
      # ./spec/models/payment_detail_spec.rb:9:in `block (2 levels) in <top (required)>'
-     # ./spec/models/payment_detail_spec.rb:50:in `block (5 levels) in <top (required)>'
+     # ./spec/models/payment_detail_spec.rb:19:in `block (2 levels) in <top (required)>'
 
-  160) PaymentDetail validating attributes amount text 
+  156) PaymentDetail accessible attributes should not allow access to user_id
+     Failure/Error: expect do
+       expected ActiveModel::MassAssignmentSecurity::Error, got #<NoMethodError: undefined method `password=' for #<User:0x4335030>>
+     # ./spec/models/payment_detail_spec.rb:35:in `block (3 levels) in <top (required)>'
+
+  157) PaymentDetail accessible attributes should not allow access to payable_id
+     Failure/Error: expect do
+       expected ActiveModel::MassAssignmentSecurity::Error, got #<NoMethodError: undefined method `password=' for #<User:0x4c9eb10>>
+     # ./spec/models/payment_detail_spec.rb:23:in `block (3 levels) in <top (required)>'
+
+  158) PaymentDetail validating attributes amount text 
      Failure/Error: let(:user) { FactoryGirl.create(:user) }
      NoMethodError:
-       undefined method `password=' for #<User:0x4cf42e0>
+       undefined method `password=' for #<User:0x4cb7f50>
      # C:in `object'
      # ./spec/models/payment_detail_spec.rb:5:in `block (2 levels) in <top (required)>'
      # ./spec/models/payment_detail_spec.rb:8:in `block (2 levels) in <top (required)>'
      # ./spec/models/payment_detail_spec.rb:56:in `block (5 levels) in <top (required)>'
 
-Finished in 4.52 seconds
+  159) PaymentDetail validating attributes amount blank 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4cc09e0>
+     # C:in `object'
+     # ./spec/models/payment_detail_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/payment_detail_spec.rb:9:in `block (2 levels) in <top (required)>'
+     # ./spec/models/payment_detail_spec.rb:50:in `block (5 levels) in <top (required)>'
+
+  160) PaymentDetail validating attributes amount nil 
+     Failure/Error: let(:user) { FactoryGirl.create(:user) }
+     NoMethodError:
+       undefined method `password=' for #<User:0x4cd6b38>
+     # C:in `object'
+     # ./spec/models/payment_detail_spec.rb:5:in `block (2 levels) in <top (required)>'
+     # ./spec/models/payment_detail_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/models/payment_detail_spec.rb:44:in `block (5 levels) in <top (required)>'
+
+Finished in 4.54 seconds
 163 examples, 160 failures
 
 Failed examples:
 
-rspec ./spec/models/advertisement_spec.rb:10 # Advertisement 
-rspec ./spec/models/advertisement_spec.rb:17 # Advertisement 
-rspec ./spec/models/advertisement_spec.rb:12 # Advertisement 
-rspec ./spec/models/advertisement_spec.rb:16 # Advertisement 
-rspec ./spec/models/advertisement_spec.rb:13 # Advertisement 
-rspec ./spec/models/advertisement_spec.rb:15 # Advertisement 
-rspec ./spec/models/advertisement_spec.rb:14 # Advertisement 
-rspec ./spec/models/advertisement_spec.rb:18 # Advertisement 
-rspec ./spec/models/advertisement_spec.rb:11 # Advertisement 
-rspec ./spec/models/advertisement_spec.rb:21 # Advertisement accessible attributes should not allow access to user_id
-rspec ./spec/models/advertisement_spec.rb:27 # Advertisement accessible attributes should not allow access to board_id
-rspec ./spec/models/advertisement_spec.rb:39 # Advertisement validating attributes x_location nil 
-rspec ./spec/models/advertisement_spec.rb:45 # Advertisement validating attributes x_location blank 
-rspec ./spec/models/advertisement_spec.rb:51 # Advertisement validating attributes x_location text 
-rspec ./spec/models/advertisement_spec.rb:66 # Advertisement validating attributes x_location larger than board width 
-rspec ./spec/models/advertisement_spec.rb:57 # Advertisement validating attributes x_location negative 
-rspec ./spec/models/advertisement_spec.rb:92 # Advertisement validating attributes y_location larger than board height 
-rspec ./spec/models/advertisement_spec.rb:83 # Advertisement validating attributes y_location negative 
-rspec ./spec/models/advertisement_spec.rb:118 # Advertisement validating attributes height larger than board height 
-rspec ./spec/models/advertisement_spec.rb:109 # Advertisement validating attributes height negative 
-rspec ./spec/models/advertisement_spec.rb:164 # Advertisement validating attributes x_location & width combined larger than board width 
-rspec ./spec/models/advertisement_spec.rb:152 # Advertisement validating attributes image nil 
-rspec ./spec/models/advertisement_spec.rb:144 # Advertisement validating attributes width larger than board width 
-rspec ./spec/models/advertisement_spec.rb:135 # Advertisement validating attributes width negative 
-rspec ./spec/models/advertisement_spec.rb:176 # Advertisement validating attributes y_location & height combined larger than board height 
-rspec ./spec/requests/static_pages_spec.rb:9 # StaticPages Home page 
-rspec ./spec/requests/static_pages_spec.rb:10 # StaticPages Home page 
-rspec ./spec/requests/static_pages_spec.rb:12 # StaticPages Home page should not be accessible via some other route
-rspec ./spec/requests/static_pages_spec.rb:26 # StaticPages Sign up page 
-rspec ./spec/requests/static_pages_spec.rb:27 # StaticPages Sign up page 
 rspec ./spec/requests/static_pages_spec.rb:33 # StaticPages Sign in page 
 rspec ./spec/requests/static_pages_spec.rb:34 # StaticPages Sign in page 
-rspec ./spec/requests/board_pages_spec.rb:13 # BoardPages listing should list all the boards
-rspec ./spec/requests/board_pages_spec.rb:23 # BoardPages display 
-rspec ./spec/requests/board_pages_spec.rb:24 # BoardPages display 
-rspec ./spec/requests/board_pages_spec.rb:25 # BoardPages display 
-rspec ./spec/requests/board_pages_spec.rb:27 # BoardPages display 
-rspec ./spec/requests/board_pages_spec.rb:28 # BoardPages display 
-rspec ./spec/requests/board_pages_spec.rb:26 # BoardPages display 
-rspec ./spec/models/tile_spec.rb:11 # Tile 
-rspec ./spec/models/tile_spec.rb:12 # Tile 
-rspec ./spec/models/tile_spec.rb:13 # Tile 
-rspec ./spec/models/tile_spec.rb:15 # Tile 
-rspec ./spec/models/tile_spec.rb:16 # Tile 
-rspec ./spec/models/tile_spec.rb:14 # Tile 
-rspec ./spec/models/tile_spec.rb:19 # Tile accessible attributes should not allow access to board_id
-rspec ./spec/models/tile_spec.rb:25 # Tile accessible attributes should not allow access to advertisement_id
-rspec ./spec/models/tile_spec.rb:55 # Tile validating attributes x_location nil 
-rspec ./spec/models/tile_spec.rb:61 # Tile validating attributes x_location blank 
-rspec ./spec/models/tile_spec.rb:67 # Tile validating attributes x_location text 
-rspec ./spec/models/tile_spec.rb:91 # Tile validating attributes x_location smaller than ad x_location 
-rspec ./spec/models/tile_spec.rb:82 # Tile validating attributes x_location larger than board width 
-rspec ./spec/models/tile_spec.rb:73 # Tile validating attributes x_location negative 
-rspec ./spec/models/tile_spec.rb:101 # Tile validating attributes x_location past end of ad width 
-rspec ./spec/models/tile_spec.rb:109 # Tile validating attributes y_location nil 
-rspec ./spec/models/tile_spec.rb:115 # Tile validating attributes y_location blank 
-rspec ./spec/models/tile_spec.rb:143 # Tile validating attributes y_location smaller than ad y_location 
-rspec ./spec/models/tile_spec.rb:134 # Tile validating attributes y_location larger than board height 
-rspec ./spec/models/tile_spec.rb:125 # Tile validating attributes y_location negative 
-rspec ./spec/models/tile_spec.rb:153 # Tile validating attributes y_location past end of ad height 
-rspec ./spec/models/tile_spec.rb:161 # Tile validating attributes cost nil 
-rspec ./spec/models/tile_spec.rb:179 # Tile validating attributes cost negative 
-rspec ./spec/models/tile_spec.rb:173 # Tile validating attributes cost text 
-rspec ./spec/models/tile_spec.rb:167 # Tile validating attributes cost blank 
-rspec ./spec/models/user_spec.rb:8 # User 
-rspec ./spec/models/user_spec.rb:19 # User 
-rspec ./spec/models/user_spec.rb:18 # User 
-rspec ./spec/models/user_spec.rb:12 # User 
-rspec ./spec/models/user_spec.rb:13 # User 
-rspec ./spec/models/user_spec.rb:16 # User 
-rspec ./spec/models/user_spec.rb:15 # User 
-rspec ./spec/models/user_spec.rb:20 # User 
-rspec ./spec/models/user_spec.rb:9 # User 
-rspec ./spec/models/user_spec.rb:10 # User 
-rspec ./spec/models/user_spec.rb:14 # User 
-rspec ./spec/models/user_spec.rb:29 # User accessible attributes should not allow access to password_digest
-rspec ./spec/models/user_spec.rb:35 # User accessible attributes should not allow access to remember_token
-rspec ./spec/models/user_spec.rb:128 # User supports authentication with valid password 
-rspec ./spec/models/user_spec.rb:134 # User supports authentication with invalid password 
-rspec ./spec/models/user_spec.rb:135 # User supports authentication with invalid password 
-rspec ./spec/models/user_spec.rb:115 # User administrator 
-rspec ./spec/models/user_spec.rb:120 # User administrator can be turned on explicitly 
-rspec ./spec/models/user_spec.rb:47 # User validating attributes name nil 
-rspec ./spec/models/user_spec.rb:53 # User validating attributes name blank 
-rspec ./spec/models/user_spec.rb:110 # User validating attributes remember_token 
-rspec ./spec/models/user_spec.rb:84 # User validating attributes password and confirmation nil 
-rspec ./spec/models/user_spec.rb:105 # User validating attributes password and confirmation not matching 
-rspec ./spec/models/user_spec.rb:96 # User validating attributes password and confirmation too short 
-rspec ./spec/models/user_spec.rb:90 # User validating attributes password and confirmation blank 
-rspec ./spec/models/user_spec.rb:61 # User validating attributes email nil 
-rspec ./spec/models/user_spec.rb:67 # User validating attributes email blank 
-rspec ./spec/models/user_spec.rb:76 # User validating attributes email already in use 
-rspec ./spec/requests/authorization_pages_spec.rb:15 # AuthorizationPages user profile access by different user 
-rspec ./spec/requests/authorization_pages_spec.rb:23 # AuthorizationPages user listing before signing in 
-rspec ./spec/requests/authorization_pages_spec.rb:35 # AuthorizationPages user listing signed in as regular user 
-rspec ./spec/requests/authentication_pages_spec.rb:7 # AuthenticationPages sign in with missing information it should behave like failed login 
-rspec ./spec/requests/authentication_pages_spec.rb:8 # AuthenticationPages sign in with missing information it should behave like failed login 
-rspec ./spec/requests/authentication_pages_spec.rb:13 # AuthenticationPages sign in with missing information it should behave like failed login after visiting another page 
+rspec ./spec/requests/static_pages_spec.rb:26 # StaticPages Sign up page 
+rspec ./spec/requests/static_pages_spec.rb:27 # StaticPages Sign up page 
+rspec ./spec/requests/static_pages_spec.rb:12 # StaticPages Home page should not be accessible via some other route
+rspec ./spec/requests/static_pages_spec.rb:10 # StaticPages Home page 
+rspec ./spec/requests/static_pages_spec.rb:9 # StaticPages Home page 
 rspec ./spec/requests/authentication_pages_spec.rb:18 # AuthenticationPages sign in with valid information--different email it should behave like successful login 
 rspec ./spec/requests/authentication_pages_spec.rb:19 # AuthenticationPages sign in with valid information--different email it should behave like successful login 
 rspec ./spec/requests/authentication_pages_spec.rb:24 # AuthenticationPages sign in with valid information--different email it should behave like successful login followed by signout 
@@ -1470,54 +1379,145 @@ rspec ./spec/requests/authentication_pages_spec.rb:13 # AuthenticationPages sign
 rspec ./spec/requests/authentication_pages_spec.rb:7 # AuthenticationPages sign in with invalid information password bad it should behave like failed login 
 rspec ./spec/requests/authentication_pages_spec.rb:8 # AuthenticationPages sign in with invalid information password bad it should behave like failed login 
 rspec ./spec/requests/authentication_pages_spec.rb:13 # AuthenticationPages sign in with invalid information password bad it should behave like failed login after visiting another page 
+rspec ./spec/requests/authentication_pages_spec.rb:7 # AuthenticationPages sign in with missing information it should behave like failed login 
+rspec ./spec/requests/authentication_pages_spec.rb:8 # AuthenticationPages sign in with missing information it should behave like failed login 
+rspec ./spec/requests/authentication_pages_spec.rb:13 # AuthenticationPages sign in with missing information it should behave like failed login after visiting another page 
+rspec ./spec/models/advertisement_spec.rb:17 # Advertisement 
+rspec ./spec/models/advertisement_spec.rb:14 # Advertisement 
+rspec ./spec/models/advertisement_spec.rb:10 # Advertisement 
+rspec ./spec/models/advertisement_spec.rb:16 # Advertisement 
+rspec ./spec/models/advertisement_spec.rb:11 # Advertisement 
+rspec ./spec/models/advertisement_spec.rb:13 # Advertisement 
+rspec ./spec/models/advertisement_spec.rb:15 # Advertisement 
+rspec ./spec/models/advertisement_spec.rb:12 # Advertisement 
+rspec ./spec/models/advertisement_spec.rb:18 # Advertisement 
+rspec ./spec/models/advertisement_spec.rb:21 # Advertisement accessible attributes should not allow access to user_id
+rspec ./spec/models/advertisement_spec.rb:27 # Advertisement accessible attributes should not allow access to board_id
+rspec ./spec/models/advertisement_spec.rb:135 # Advertisement validating attributes width negative 
+rspec ./spec/models/advertisement_spec.rb:144 # Advertisement validating attributes width larger than board width 
+rspec ./spec/models/advertisement_spec.rb:57 # Advertisement validating attributes x_location negative 
+rspec ./spec/models/advertisement_spec.rb:45 # Advertisement validating attributes x_location blank 
+rspec ./spec/models/advertisement_spec.rb:39 # Advertisement validating attributes x_location nil 
+rspec ./spec/models/advertisement_spec.rb:51 # Advertisement validating attributes x_location text 
+rspec ./spec/models/advertisement_spec.rb:66 # Advertisement validating attributes x_location larger than board width 
+rspec ./spec/models/advertisement_spec.rb:109 # Advertisement validating attributes height negative 
+rspec ./spec/models/advertisement_spec.rb:118 # Advertisement validating attributes height larger than board height 
+rspec ./spec/models/advertisement_spec.rb:83 # Advertisement validating attributes y_location negative 
+rspec ./spec/models/advertisement_spec.rb:92 # Advertisement validating attributes y_location larger than board height 
+rspec ./spec/models/advertisement_spec.rb:176 # Advertisement validating attributes y_location & height combined larger than board height 
+rspec ./spec/models/advertisement_spec.rb:164 # Advertisement validating attributes x_location & width combined larger than board width 
+rspec ./spec/models/advertisement_spec.rb:152 # Advertisement validating attributes image nil 
+rspec ./spec/requests/board_pages_spec.rb:13 # BoardPages listing should list all the boards
+rspec ./spec/requests/board_pages_spec.rb:26 # BoardPages display 
+rspec ./spec/requests/board_pages_spec.rb:23 # BoardPages display 
+rspec ./spec/requests/board_pages_spec.rb:25 # BoardPages display 
+rspec ./spec/requests/board_pages_spec.rb:24 # BoardPages display 
+rspec ./spec/requests/board_pages_spec.rb:27 # BoardPages display 
+rspec ./spec/requests/board_pages_spec.rb:28 # BoardPages display 
+rspec ./spec/models/board_spec.rb:12 # Board 
+rspec ./spec/models/board_spec.rb:10 # Board 
+rspec ./spec/models/board_spec.rb:9 # Board 
+rspec ./spec/models/board_spec.rb:11 # Board 
+rspec ./spec/models/board_spec.rb:13 # Board 
+rspec ./spec/models/board_spec.rb:16 # Board accessible attributes should not allow access to user_id
+rspec ./spec/models/board_spec.rb:118 # Board validating attributes timezone garbage 
+rspec ./spec/models/board_spec.rb:112 # Board validating attributes timezone blank 
+rspec ./spec/models/board_spec.rb:106 # Board validating attributes timezone nil 
+rspec ./spec/models/board_spec.rb:92 # Board validating attributes width negative 
+rspec ./spec/models/board_spec.rb:80 # Board validating attributes width blank 
+rspec ./spec/models/board_spec.rb:74 # Board validating attributes width nil 
+rspec ./spec/models/board_spec.rb:86 # Board validating attributes width text 
+rspec ./spec/models/board_spec.rb:98 # Board validating attributes width zero 
+rspec ./spec/models/board_spec.rb:60 # Board validating attributes height negative 
+rspec ./spec/models/board_spec.rb:48 # Board validating attributes height blank 
+rspec ./spec/models/board_spec.rb:42 # Board validating attributes height nil 
+rspec ./spec/models/board_spec.rb:54 # Board validating attributes height text 
+rspec ./spec/models/board_spec.rb:66 # Board validating attributes height zero 
+rspec ./spec/models/board_spec.rb:28 # Board validating attributes name nil 
+rspec ./spec/models/board_spec.rb:34 # Board validating attributes name blank 
+rspec ./spec/models/user_spec.rb:18 # User 
+rspec ./spec/models/user_spec.rb:14 # User 
+rspec ./spec/models/user_spec.rb:8 # User 
+rspec ./spec/models/user_spec.rb:16 # User 
+rspec ./spec/models/user_spec.rb:9 # User 
+rspec ./spec/models/user_spec.rb:12 # User 
+rspec ./spec/models/user_spec.rb:15 # User 
+rspec ./spec/models/user_spec.rb:13 # User 
+rspec ./spec/models/user_spec.rb:19 # User 
+rspec ./spec/models/user_spec.rb:20 # User 
+rspec ./spec/models/user_spec.rb:10 # User 
+rspec ./spec/models/user_spec.rb:128 # User supports authentication with valid password 
+rspec ./spec/models/user_spec.rb:134 # User supports authentication with invalid password 
+rspec ./spec/models/user_spec.rb:135 # User supports authentication with invalid password 
+rspec ./spec/models/user_spec.rb:115 # User administrator 
+rspec ./spec/models/user_spec.rb:120 # User administrator can be turned on explicitly 
+rspec ./spec/models/user_spec.rb:110 # User validating attributes remember_token 
+rspec ./spec/models/user_spec.rb:105 # User validating attributes password and confirmation not matching 
+rspec ./spec/models/user_spec.rb:96 # User validating attributes password and confirmation too short 
+rspec ./spec/models/user_spec.rb:90 # User validating attributes password and confirmation blank 
+rspec ./spec/models/user_spec.rb:84 # User validating attributes password and confirmation nil 
+rspec ./spec/models/user_spec.rb:76 # User validating attributes email already in use 
+rspec ./spec/models/user_spec.rb:67 # User validating attributes email blank 
+rspec ./spec/models/user_spec.rb:61 # User validating attributes email nil 
+rspec ./spec/models/user_spec.rb:47 # User validating attributes name nil 
+rspec ./spec/models/user_spec.rb:53 # User validating attributes name blank 
+rspec ./spec/models/user_spec.rb:35 # User accessible attributes should not allow access to remember_token
+rspec ./spec/models/user_spec.rb:29 # User accessible attributes should not allow access to password_digest
+rspec ./spec/models/tile_spec.rb:14 # Tile 
+rspec ./spec/models/tile_spec.rb:11 # Tile 
+rspec ./spec/models/tile_spec.rb:13 # Tile 
+rspec ./spec/models/tile_spec.rb:12 # Tile 
+rspec ./spec/models/tile_spec.rb:15 # Tile 
+rspec ./spec/models/tile_spec.rb:16 # Tile 
+rspec ./spec/models/tile_spec.rb:25 # Tile accessible attributes should not allow access to advertisement_id
+rspec ./spec/models/tile_spec.rb:19 # Tile accessible attributes should not allow access to board_id
+rspec ./spec/models/tile_spec.rb:179 # Tile validating attributes cost negative 
+rspec ./spec/models/tile_spec.rb:173 # Tile validating attributes cost text 
+rspec ./spec/models/tile_spec.rb:167 # Tile validating attributes cost blank 
+rspec ./spec/models/tile_spec.rb:161 # Tile validating attributes cost nil 
+rspec ./spec/models/tile_spec.rb:125 # Tile validating attributes y_location negative 
+rspec ./spec/models/tile_spec.rb:109 # Tile validating attributes y_location nil 
+rspec ./spec/models/tile_spec.rb:115 # Tile validating attributes y_location blank 
+rspec ./spec/models/tile_spec.rb:153 # Tile validating attributes y_location past end of ad height 
+rspec ./spec/models/tile_spec.rb:143 # Tile validating attributes y_location smaller than ad y_location 
+rspec ./spec/models/tile_spec.rb:134 # Tile validating attributes y_location larger than board height 
+rspec ./spec/models/tile_spec.rb:73 # Tile validating attributes x_location negative 
+rspec ./spec/models/tile_spec.rb:55 # Tile validating attributes x_location nil 
+rspec ./spec/models/tile_spec.rb:67 # Tile validating attributes x_location text 
+rspec ./spec/models/tile_spec.rb:61 # Tile validating attributes x_location blank 
+rspec ./spec/models/tile_spec.rb:101 # Tile validating attributes x_location past end of ad width 
+rspec ./spec/models/tile_spec.rb:91 # Tile validating attributes x_location smaller than ad x_location 
+rspec ./spec/models/tile_spec.rb:82 # Tile validating attributes x_location larger than board width 
+rspec ./spec/requests/authorization_pages_spec.rb:15 # AuthorizationPages user profile access by different user 
+rspec ./spec/requests/authorization_pages_spec.rb:23 # AuthorizationPages user listing before signing in 
+rspec ./spec/requests/authorization_pages_spec.rb:35 # AuthorizationPages user listing signed in as regular user 
+rspec ./spec/requests/user_pages_spec.rb:78 # UserPages user listing signed in as administrator shouldn't allow self to be deleted
+rspec ./spec/requests/user_pages_spec.rb:75 # UserPages user listing signed in as administrator 
+rspec ./spec/requests/user_pages_spec.rb:71 # UserPages user listing signed in as administrator should list all the users
+rspec ./spec/requests/user_pages_spec.rb:76 # UserPages user listing signed in as administrator 
+rspec ./spec/requests/user_pages_spec.rb:81 # UserPages user listing signed in as administrator should remove a user on deletion
+rspec ./spec/requests/user_pages_spec.rb:43 # UserPages profile 
+rspec ./spec/requests/user_pages_spec.rb:55 # UserPages profile after signing in 
+rspec ./spec/requests/user_pages_spec.rb:54 # UserPages profile after signing in 
+rspec ./spec/requests/user_pages_spec.rb:53 # UserPages profile after signing in 
+rspec ./spec/requests/user_pages_spec.rb:52 # UserPages profile after signing in 
 rspec ./spec/requests/user_pages_spec.rb:10 # UserPages signup with invalid information should not create a user
 rspec ./spec/requests/user_pages_spec.rb:23 # UserPages signup with valid information should create a user
 rspec ./spec/requests/user_pages_spec.rb:32 # UserPages signup with valid information after saving the user 
 rspec ./spec/requests/user_pages_spec.rb:33 # UserPages signup with valid information after saving the user 
-rspec ./spec/requests/user_pages_spec.rb:43 # UserPages profile 
-rspec ./spec/requests/user_pages_spec.rb:52 # UserPages profile after signing in 
-rspec ./spec/requests/user_pages_spec.rb:55 # UserPages profile after signing in 
-rspec ./spec/requests/user_pages_spec.rb:54 # UserPages profile after signing in 
-rspec ./spec/requests/user_pages_spec.rb:53 # UserPages profile after signing in 
-rspec ./spec/requests/user_pages_spec.rb:71 # UserPages user listing signed in as administrator should list all the users
-rspec ./spec/requests/user_pages_spec.rb:75 # UserPages user listing signed in as administrator 
-rspec ./spec/requests/user_pages_spec.rb:76 # UserPages user listing signed in as administrator 
-rspec ./spec/requests/user_pages_spec.rb:81 # UserPages user listing signed in as administrator should remove a user on deletion
-rspec ./spec/requests/user_pages_spec.rb:78 # UserPages user listing signed in as administrator shouldn't allow self to be deleted
-rspec ./spec/models/board_spec.rb:9 # Board 
-rspec ./spec/models/board_spec.rb:10 # Board 
-rspec ./spec/models/board_spec.rb:11 # Board 
-rspec ./spec/models/board_spec.rb:13 # Board 
-rspec ./spec/models/board_spec.rb:12 # Board 
-rspec ./spec/models/board_spec.rb:16 # Board accessible attributes should not allow access to user_id
-rspec ./spec/models/board_spec.rb:28 # Board validating attributes name nil 
-rspec ./spec/models/board_spec.rb:34 # Board validating attributes name blank 
-rspec ./spec/models/board_spec.rb:106 # Board validating attributes timezone nil 
-rspec ./spec/models/board_spec.rb:112 # Board validating attributes timezone blank 
-rspec ./spec/models/board_spec.rb:118 # Board validating attributes timezone garbage 
-rspec ./spec/models/board_spec.rb:74 # Board validating attributes width nil 
-rspec ./spec/models/board_spec.rb:80 # Board validating attributes width blank 
-rspec ./spec/models/board_spec.rb:86 # Board validating attributes width text 
-rspec ./spec/models/board_spec.rb:98 # Board validating attributes width zero 
-rspec ./spec/models/board_spec.rb:92 # Board validating attributes width negative 
-rspec ./spec/models/board_spec.rb:42 # Board validating attributes height nil 
-rspec ./spec/models/board_spec.rb:48 # Board validating attributes height blank 
-rspec ./spec/models/board_spec.rb:54 # Board validating attributes height text 
-rspec ./spec/models/board_spec.rb:66 # Board validating attributes height zero 
-rspec ./spec/models/board_spec.rb:60 # Board validating attributes height negative 
-rspec ./spec/models/payment_detail_spec.rb:11 # PaymentDetail 
 rspec ./spec/models/payment_detail_spec.rb:14 # PaymentDetail 
 rspec ./spec/models/payment_detail_spec.rb:13 # PaymentDetail 
-rspec ./spec/models/payment_detail_spec.rb:18 # PaymentDetail 
-rspec ./spec/models/payment_detail_spec.rb:19 # PaymentDetail 
-rspec ./spec/models/payment_detail_spec.rb:16 # PaymentDetail 
 rspec ./spec/models/payment_detail_spec.rb:12 # PaymentDetail 
+rspec ./spec/models/payment_detail_spec.rb:11 # PaymentDetail 
+rspec ./spec/models/payment_detail_spec.rb:18 # PaymentDetail 
+rspec ./spec/models/payment_detail_spec.rb:16 # PaymentDetail 
 rspec ./spec/models/payment_detail_spec.rb:17 # PaymentDetail 
-rspec ./spec/models/payment_detail_spec.rb:22 # PaymentDetail accessible attributes should not allow access to payable_id
+rspec ./spec/models/payment_detail_spec.rb:19 # PaymentDetail 
 rspec ./spec/models/payment_detail_spec.rb:34 # PaymentDetail accessible attributes should not allow access to user_id
-rspec ./spec/models/payment_detail_spec.rb:46 # PaymentDetail validating attributes amount nil 
-rspec ./spec/models/payment_detail_spec.rb:52 # PaymentDetail validating attributes amount blank 
+rspec ./spec/models/payment_detail_spec.rb:22 # PaymentDetail accessible attributes should not allow access to payable_id
 rspec ./spec/models/payment_detail_spec.rb:58 # PaymentDetail validating attributes amount text 
+rspec ./spec/models/payment_detail_spec.rb:52 # PaymentDetail validating attributes amount blank 
+rspec ./spec/models/payment_detail_spec.rb:46 # PaymentDetail validating attributes amount nil 
 
-Randomized with seed 43504
+Randomized with seed 3637
 
