@@ -1,0 +1,8 @@
+<% if signed_in? %>
+  <h1>Welcome to the home page man!!</h1>
+  
+  <p>Sign out <%= link_to "here", signout_path, method: :delete %></p>
+      
+<% else %>
+  <%= render 'shared/not_signed_in' %>
+<% end %>

@@ -1,0 +1,35 @@
+<% provide(:title, @user.name) %>
+<p>List Users <%= link_to "here", users_path %></p>
+
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        
+		<%= gravatar_for @user %>
+		<ol>
+          <li><%= @user.name %></li>
+		  <li><%= @user.email %></li>
+		</ol>
+      </h1>
+    </section>
+    <section>
+    
+    </section>
+  </aside>
+  <div class="span8">
+    
+	<div class="span8">
+    <% if @user.valid? %>
+      <h3>Microposts </h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
+  <% if current_user?(current_user) %>
+  <p>Log out <%= link_to "Sign out", signout_path, method: :delete %></p>
+  <% end %>
+  
+</div>

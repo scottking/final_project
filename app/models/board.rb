@@ -9,18 +9,17 @@ class Board < ActiveRecord::Base
   belongs_to :user
   
   validates :name, 		presence: true
-  validates :height, 	numericality: { greater_than: 0}
-  validates :width,  	numericality: { greater_than: 0 }
-  validates :timezone,	presence: true
-  #validates_inclusion_of :time_zone, presence: true, in: ActiveSupport::TimeZone.zones_map { |m| m.name }, message: "is not a valid Time Zone"
-
+  validates :height, 	presence: true, numericality: { greater_than: 0}
+  validates :width,  	presence: true, numericality: { greater_than: 0 }
+  #validates :timezone,	presence: true
+  validates :timezone, presence: true, inclusion: {in: ActiveSupport::TimeZone.zones_map(&:to_s)}  
   
   #validate :garbage
   
   private
   
     def garbage
-      if timezone == "garbage"
+      if self.timezone == "garbage"
 	    errors.add(:timezone, "Incorrect timezone")
 	  end
     end
