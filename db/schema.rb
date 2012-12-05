@@ -21,8 +21,10 @@ ActiveRecord::Schema.define(:version => 20121119140601) do
     t.binary   "image"
     t.integer  "x_location"
     t.integer  "y_location"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "charge"
+    t.string   "image_contents"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "boards", :force => true do |t|
@@ -31,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20121119140601) do
     t.integer  "width"
     t.integer  "height"
     t.string   "timezone"
+    t.integer  "age"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -49,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20121119140601) do
     t.decimal  "cost"
     t.integer  "x_location"
     t.integer  "y_location"
+    t.integer  "age"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end

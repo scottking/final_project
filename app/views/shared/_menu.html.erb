@@ -1,0 +1,12 @@
+<div class="top_menu">
+  
+  <p><% if signed_in? %>Welcome, <%= link_to current_user.name, user_path(current_user) %> | <% end %><%= link_to "Home", root_path %> |
+  <% if signed_in? %>
+		<%= link_to "Sign out", signout_path, method: :delete %>
+  <% else %>
+	    <%= link_to "Sign in", signin_path %>
+  <% end %>
+
+  <% if signed_in? %><% if current_user.admin? %>| <%= link_to "Users", users_path %></p><% end %><% end %>
+  
+</div>

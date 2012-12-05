@@ -18,7 +18,7 @@ class Advertisement < ActiveRecord::Base
   private
   
     def sizing
-	  if x_location.is_a?(Integer) && y_location.is_a?(Integer)
+	  if x_location.is_a?(Integer) && y_location.is_a?(Integer) && width.is_a?(Integer) && height.is_a?(Integer)
 	  
       if self.x_location >= self.board.width
 	    errors.add(:x_location, "Can't be larger than width")
@@ -28,20 +28,12 @@ class Advertisement < ActiveRecord::Base
 	    errors.add(:y_location, "Can't be larger than height")
 	  end
 	  
-	  if self.width >= self.board.width
-	    errors.add(:width, "Can't be larger than width")
-	  end
-	  
-	  if self.height >= self.board.height
-	    errors.add(:height, "Can't be larger than height")
-	  end
-	  
-	  if self.x_location + self.width >= self.board.width
+	  if self.x_location + self.width > self.board.width
 	    errors.add(:x_location, 	"Can't be larger than width (combination error)")
 	    errors.add(:width, 		"Can't be larger than width (combination error)")
 	  end
 	  
-	  if self.y_location + self.height >= self.board.height
+	  if self.y_location + self.height > self.board.height
 	    errors.add(:y_location, 	"Can't be larger than height (combination error)")
 	    errors.add(:height, 		"Can't be larger than height (combination error)")
 	  end

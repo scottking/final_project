@@ -1,0 +1,25 @@
+<%= render 'shared/menu' %>
+<h1>Boards#new</h1>
+<p>Find me in app/views/boards/new.html.erb</p>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@board) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+	  
+	  <%= f.label :name %>
+      <%= f.text_field :name %>
+	  
+	  <%= f.label :width %>
+      <%= f.text_field :width %>
+	  
+	  <%= f.label :height %>
+      <%= f.text_field :height %>
+	  
+	  <%= f.label :timezone %>
+      <%= f.time_zone_select :timezone %>
+	  
+      <%= f.submit "Create new board", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

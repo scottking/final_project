@@ -1,6 +1,5 @@
 ElectronicBulletinBoard::Application.routes.draw do
-  
-  
+
   #/*resources :users do
   #  member do
   #  get :following, :followers
@@ -17,11 +16,16 @@ ElectronicBulletinBoard::Application.routes.draw do
   
   resources :sessions,      only: [:new, :create, :destroy]
   resources :users
+  resources :boards do
+	resources :advertisements
+	resources :tiles
+  end
   
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-  match '/home' , to: 'static_pages#home'
+  match '/home' , 	to: 'static_pages#home'
+  match '/help' ,	to: 'static_pages#help'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

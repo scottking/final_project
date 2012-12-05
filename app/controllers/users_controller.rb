@@ -1,21 +1,22 @@
 class UsersController < ApplicationController
-  include ActiveModel::MassAssignmentSecurity
+  #include ActiveModel::MassAssignmentSecurity
   
   before_filter :signed_in_user,	only: [:index, :edit, :update, :destroy]  
-  #before_filter :correct_user,   only: [:edit, :update]
+  before_filter :correct_user,		only: [:edit, :update]
   #before_filter :admin_user,     only: :destroy
   
   def show
     @user = User.find(params[:id])
+	@boards = Board.find_by_user_id(params[:id]) #this line is added
 	#@microposts = @user.microposts.paginate(page: params[:page])
   end
   
   def new
-    #if signed_in?
-	#  redirect_to root_path
-	#else
+    if signed_in?
+	  redirect_to root_path
+	else
 	  @user = User.new
-	#end
+	end
   end
   
   def create
@@ -34,20 +35,28 @@ class UsersController < ApplicationController
   end
   
   def index
-    @users = User.all#paginate(page: params[:page])
+    if current_user.admin?
+      @users = User.all#paginate(page: params[:page])
+	  #@boards = Board.all
+	else
+	  redirect_to root_path
+	end
   end
   
   def edit
+    @user = User.find(params[:id])
   end
   
   def destroy
-    if signed_in? && current_user.admin?
+    #if signed_in? && current_user.admin?
 	  #notice: "You can't destroy yourself."
-	else
-      User.find(params[:id]).destroy
-	  flash[:success] = "User destroyed."
-	  redirect_to users_url
-	end
+	#else
+	User.find(params[:id]).boards.destroy
+    User.find(params[:id]).destroy
+	flash[:success] = "User destroyed."
+	redirect_to users_url
+	  #redirect_to root_path
+	#end
   end
   
   def update

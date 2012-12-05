@@ -1,0 +1,42 @@
+<%= render 'shared/menu' %>
+<h1>Boards#show</h1>
+<p>Find me in app/views/boards/show.html.erb</p>
+
+<p>Back to created user: <%= link_to @board.user.name, user_path(@board.user) %></p>
+<p>List all <%= link_to 'boards', boards_path %></p>
+
+<div class="row">
+  <aside class="span12">
+    <section>
+      <h1>
+        
+		<ol>
+          <li>Name: <%= @board.name %></li>
+		  <li>Width: <%= @board.width %></li>
+		  <li>Height: <%= @board.height %></li>
+		  <li>Timezone: <%= @board.timezone %></li>
+		  <li>User_id: <%= @board.user_id %></li>
+		</ol>
+      </h1>
+    </section>
+    <section>
+    
+    </section>
+  </aside>
+  
+  <div style="	width: <%= @board.width*64 %>px; 
+				border: solid black 1px; 
+				height: <%= @board.height*64 %>px;
+				position: relative;
+				float: left;">
+		<% @board.advertisements.each do |ad| %>	
+			<div style="position: absolute; width: <%= ad.width*64 %>px; outline: solid red 1px; height: <%= ad.height*64 %>px; left:<%= ad.x_location*64 %>px; top:<%= ad.y_location*64 %>px;"/><%= ad.user.name %></div>
+		<% end %>
+  </div>
+  
+  
+  <div class="span8">
+    <%= link_to "Create Advertisement", new_board_advertisement_path(@board), class: "btn btn-large btn-primary" %>
+  </div>
+  
+</div>

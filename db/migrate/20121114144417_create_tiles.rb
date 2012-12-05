@@ -6,6 +6,7 @@ class CreateTiles < ActiveRecord::Migration
       t.decimal :cost
       t.integer :x_location
       t.integer :y_location
+	  t.integer :age
 
       t.timestamps
     end

@@ -1,0 +1,28 @@
+<%= render 'shared/menu' %>
+<h1>Advertisements#new</h1>
+<p>Find me in app/views/advertisements/new.html.erb</p>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for([@board, @advertisement]) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+	  
+	  <%= f.label :x_location %>
+      <%= f.text_field :x_location %>
+	  
+	  <%= f.label :width %>
+      <%= f.text_field :width %>
+
+      <%= f.label :y_location %>
+      <%= f.text_field :y_location %>
+	  
+	  <%= f.label :height %>
+      <%= f.text_field :height %>
+	  
+	  <%= f.label :image %>
+	  <%= f.file_field :image %>
+	  
+      <%= f.submit "Create new advertisement", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

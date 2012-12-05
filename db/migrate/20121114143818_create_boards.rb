@@ -6,6 +6,7 @@ class CreateBoards < ActiveRecord::Migration
       t.integer :width
       t.integer :height
       t.string :timezone
+	  t.integer :age
 
       t.timestamps
     end
