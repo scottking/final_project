@@ -8,19 +8,19 @@
       <%= render 'shared/error_messages', object: f.object %>
 	  
 	  <%= f.label :x_location %>
-      <%= f.text_field :x_location %>
+      <%= f.text_field :x_location, :id => "X Location" %>
+	  
+	  <%= f.label :y_location %>
+      <%= f.text_field :y_location, :id => "Y Location" %>
 	  
 	  <%= f.label :width %>
       <%= f.text_field :width %>
 
-      <%= f.label :y_location %>
-      <%= f.text_field :y_location %>
-	  
 	  <%= f.label :height %>
       <%= f.text_field :height %>
 	  
-	  <%= f.label :image %>
-	  <%= f.file_field :image %>
+	  <%= f.label :image_contents %>
+	  <%= f.file_field :image_contents %>
 	  
       <%= f.submit "Create new advertisement", class: "btn btn-large btn-primary" %>
     <% end %>

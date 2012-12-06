@@ -18,8 +18,8 @@ ElectronicBulletinBoard::Application.routes.draw do
   resources :users
   resources :boards do
 	resources :advertisements
-	resources :tiles
   end
+  resources :images
   
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'

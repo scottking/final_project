@@ -18,13 +18,12 @@ ActiveRecord::Schema.define(:version => 20121119140601) do
     t.integer  "board_id"
     t.integer  "height"
     t.integer  "width"
-    t.binary   "image"
+    t.binary   "image",      :limit => 255
     t.integer  "x_location"
     t.integer  "y_location"
     t.integer  "charge"
-    t.string   "image_contents"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "boards", :force => true do |t|

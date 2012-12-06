@@ -9,7 +9,7 @@ class CreateAdvertisements < ActiveRecord::Migration
       t.integer :x_location
       t.integer :y_location
 	  t.integer :charge
-	  t.string :image_contents
+	  t.string :image
 	  
 
       t.timestamps

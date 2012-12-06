@@ -1,5 +1,6 @@
 class Advertisement < ActiveRecord::Base
   attr_accessible :height, :image, :width, :x_location, :y_location
+  attr_protected :board_id, :user_id
   
   has_many :tiles
   has_many :payment_details, as: :payable
@@ -12,8 +13,13 @@ class Advertisement < ActiveRecord::Base
   validates :height, 		presence: true, numericality: { greater_than: 0}#also less than board_id.height
   validates :width, 		presence: true, numericality: { greater_than: 0}#also less than boad_id.width
   validates :image, 		presence: true
+  validates :board, 		presence: true
   
   validate :sizing
+  
+  def image_contents=(object)
+	self.image = object.read()
+  end
   
   private
   

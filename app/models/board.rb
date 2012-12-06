@@ -1,5 +1,6 @@
 class Board < ActiveRecord::Base
   attr_accessible :height, :name, :timezone, :width
+  attr_protected :user_id
   
   has_many :tiles, through: :advertisements
   has_many :advertisements

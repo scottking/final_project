@@ -17,8 +17,24 @@ class BoardsController < ApplicationController
 	  @board = current_user.boards.build(params[:board])
 	  #@board.user = current_user
       if @board.save
-        flash[:success] = "Successfully created new board!"
-        redirect_to @board
+	    #if @board.advertisements == nil
+		#  redirect_to root_path
+		#end
+	    /@advertisement = Advertisement.new
+		@advertisement.board = @board
+		@advertisement.user = User.find_by_id(1)
+		@advertisement.width = @board.width
+		@advertisement.height = @board.height
+		@advertisement.x_location = 0
+		@advertisement.y_location = 0
+		if @advertisement.save
+		  flash[:success] = "Successfully create new advertisement!"/
+		  flash[:success] = "Successfully created new board!"
+          redirect_to @board
+		/else
+		  render 'new'
+		end/
+        
       else
         render 'new'
       end
@@ -51,10 +67,6 @@ class BoardsController < ApplicationController
   end
   
   private
-    
-	def createdBy
-	  self.User.name
-	end
 	
 	
 end

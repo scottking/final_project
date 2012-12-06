@@ -1,14 +1,20 @@
 class AdvertisementsController < ApplicationController
+  
   def new
 	@board = Board.find(params[:board_id])
-    @advertisement = Advertisement.new
+    @advertisement = Advertisement.new()
   end
 
   def create
 	@board = Board.find(params[:board_id])
 	@advertisement = @board.advertisements.build(params[:advertisement])
-    @advertisement.user = current_user
-	@advertisement.image = @advertisement.image.read
+    
+	if !params[:upload].blank?
+	  @advertisment.image = @advertisment.image_contents.read
+	end
+	
+	@advertisement.user = current_user
+	#@advertisement.image = @advertisement.image.read
 	#@advertisement = Advertisement.new(params[:advertisement])
 	#@advertisement = board.build(params[:advertisement])
 	#@board = current_user.boards.build(params[:board])
@@ -47,10 +53,10 @@ class AdvertisementsController < ApplicationController
 	end
   end
   
-  def retrieve
-    @advertisement_image = Advertisement.find(params[:id])
-	send_data File.read(@advertisement_image.abs_filepath), type: "image/jpeg", disposition: 'inline'
+  def charge
+	#find price
   end
+  
   
   
 end
