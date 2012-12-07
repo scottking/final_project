@@ -1,4 +1,4 @@
-<% provide(:title, @user.name) %>
+<%= provide(:title, @user.name) %>
 <%= render 'shared/menu' %>
 
 <div class="row">
@@ -12,6 +12,7 @@
 		  <li><%= @user.email %></li>
 		</ol>
       </h1>
+
     </section>
     <section>
     
@@ -19,7 +20,8 @@
   </aside>
   <div class="span8">
     
-	<div class="span8">
+	<%= link_to "Create board", new_board_path, :id => "Create board", class: "btn btn-large btn-primary" %>
+
     
   </div>
   

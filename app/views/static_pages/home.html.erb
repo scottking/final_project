@@ -1,13 +1,30 @@
 <%= render 'shared/menu' %>
+
+<div>
+  
+  <p><% if signed_in? %>Welcome, <%= link_to current_user.name, user_path(current_user) %> | <% end %><%= link_to "Home", root_path %> |
+  <% if signed_in? %>
+		<%= link_to "Sign out", signout_path, method: :delete %>
+  <% else %>
+	    <%= link_to "Sign in", signin_path %>
+  <% end %>
+
+  <% if signed_in? %><% if current_user.admin? %>| <%= link_to "Users", users_path %></p><% end %><% end %>
+  
+</div>
+
 <% if signed_in? %>
+<div>
+  <h1>Electronic Bulletin Board</h1>
   <h1>Welcome to the home page man!!</h1>
   
-  <p>Sign out <%= link_to "here", signout_path, method: :delete %></p>
+  <p>Sign out <%= link_to "Sign out", signout_path, method: :delete %></p>
   
-  <p>Create a <%= link_to "board", new_board_path %></p>
+  <p><%= link_to "Create board", new_board_path %></p>
   
   <p>List all <%= link_to 'boards', boards_path %></p>
   
+</div>
 <% else %>
   <%= render 'shared/not_signed_in' %>
 <% end %>

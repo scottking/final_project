@@ -12,10 +12,10 @@
         
 		<ol>
           <li>Name: <%= @board.name %></li>
-		  <li>Width: <%= @board.width %></li>
-		  <li>Height: <%= @board.height %></li>
+		  <li><%= "Created by: #{@board.user.name}" %></li>
+		  <li><%= "Width: #{pluralize(@board.width, 'tile')}" %></li>
+		  <li><%= "Height: #{pluralize(@board.height, 'tile')}" %></li>
 		  <li>Timezone: <%= @board.timezone %></li>
-		  <li>User_id: <%= @board.user_id %></li>
 		</ol>
       </h1>
     </section>
@@ -40,7 +40,7 @@
   
   
   <div class="span8">
-    <%= link_to "Create Advertisement", new_board_advertisement_path(@board), query: @board.id, :method => "get", class: "btn btn-large btn-primary" %>
+    <%= link_to "Create advertisement", new_board_advertisement_path(@board), query: @board.id, :method => "get", class: "btn btn-large btn-primary" %>
   </div>
   
 </div>

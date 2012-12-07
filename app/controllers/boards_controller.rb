@@ -2,6 +2,7 @@ class BoardsController < ApplicationController
   
   def new
     if !signed_in?
+	  flash[:error] = "Not signed in"
 	  redirect_to signin_path
 	else
 	  @board = Board.new
@@ -11,7 +12,7 @@ class BoardsController < ApplicationController
 
   def create
     if !signed_in?
-	  redirect_to signin_path
+	  redirect_to root_path
 	else
 	  #@board = Board.new(params[:board])
 	  @board = current_user.boards.build(params[:board])
@@ -29,7 +30,7 @@ class BoardsController < ApplicationController
 		@advertisement.y_location = 0
 		if @advertisement.save
 		  flash[:success] = "Successfully create new advertisement!"/
-		  flash[:success] = "Successfully created new board!"
+		  flash[:success] = "Board created"
           redirect_to @board
 		/else
 		  render 'new'
@@ -65,8 +66,6 @@ class BoardsController < ApplicationController
 	flash[:success] = "Board destroyed."
 	redirect_to boards_path
   end
-  
-  private
 	
 	
 end
