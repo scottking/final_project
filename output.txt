@@ -1,0 +1,53 @@
+FF..F......FF.......F.
+
+Failures:
+
+  1) BoardPages create new board with valid information should create fake advertisement
+     Failure/Error: expect { click_button submit }.to change(Advertisement, :count).by(1)
+       count should have been changed by 1, but was changed by 0
+     # ./spec/requests/board_pages_spec.rb:69:in `block (4 levels) in <top (required)>'
+
+  2) BoardPages create new board with valid information should create a payment detail
+     Failure/Error: expect { click_button submit }.to change(PaymentDetail, :count).by(1)
+       count should have been changed by 1, but was changed by 0
+     # ./spec/requests/board_pages_spec.rb:65:in `block (4 levels) in <top (required)>'
+
+  3) BoardPages create new board with valid information after saving the board 
+     Failure/Error: specify { pd.amount.should == board.width * board.height }
+     NoMethodError:
+       undefined method `amount' for nil:NilClass
+     # ./spec/requests/board_pages_spec.rb:79:in `block (5 levels) in <top (required)>'
+
+  4) BoardPages create new board with valid information after saving the board in browser 
+     Failure/Error: fill_in 'Height', with: 10
+     Capybara::ElementNotFound:
+       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
+     # (eval):2:in `fill_in'
+     # ./spec/requests/board_pages_spec.rb:54:in `block (4 levels) in <top (required)>'
+
+  5) BoardPages create new board with valid information after saving the board in browser 
+     Failure/Error: fill_in 'Height', with: 10
+     Capybara::ElementNotFound:
+       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
+     # (eval):2:in `fill_in'
+     # ./spec/requests/board_pages_spec.rb:54:in `block (4 levels) in <top (required)>'
+
+  6) BoardPages display 
+     Failure/Error: it { should have_button('Create advertisement') }
+       expected button "Create advertisement" to return something
+     # ./spec/requests/board_pages_spec.rb:28:in `block (3 levels) in <top (required)>'
+
+Finished in 32.22 seconds
+22 examples, 6 failures
+
+Failed examples:
+
+rspec ./spec/requests/board_pages_spec.rb:68 # BoardPages create new board with valid information should create fake advertisement
+rspec ./spec/requests/board_pages_spec.rb:64 # BoardPages create new board with valid information should create a payment detail
+rspec ./spec/requests/board_pages_spec.rb:79 # BoardPages create new board with valid information after saving the board 
+rspec ./spec/requests/board_pages_spec.rb:89 # BoardPages create new board with valid information after saving the board in browser 
+rspec ./spec/requests/board_pages_spec.rb:88 # BoardPages create new board with valid information after saving the board in browser 
+rspec ./spec/requests/board_pages_spec.rb:28 # BoardPages display 
+
+Randomized with seed 18270
+

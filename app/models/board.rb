@@ -17,6 +17,8 @@ class Board < ActiveRecord::Base
   
   #validate :garbage
   
+  #before_save :create_fake_ad, :create_payment_detail
+  
   private
   
     def garbage
@@ -24,5 +26,36 @@ class Board < ActiveRecord::Base
 	    errors.add(:timezone, "Incorrect timezone")
 	  end
     end
+	
+	def create_fake_ad
+	  @ad = Advertisement.new
+	  @ad = self.advertisements.build(params[:advertisement])
+	  
+	  if !params[:upload].blank?
+	    @advertisment.image = @advertisment.image_contents.read
+	  end
+	  
+	  @ad.user = current_user
+	  @ad.x_location = 0
+	  @ad.y_location = 0
+	  @ad.width = self.width
+	  @ad.height = self.height
+	  @ad.cost = 0
+	  
+	  if @advertisement.save
+        flash[:success] = "Advertisement created"
+        redirect_to self
+      else
+        render 'new'
+      end
+	  
+	end
+	
+	def create_payment_detail
+	  #@payment = Paymentment_details.new
+	  
+	  #@payment.board = board
+	  
+	end
   
 end

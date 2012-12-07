@@ -1,28 +1,31 @@
 class UsersController < ApplicationController
   #include ActiveModel::MassAssignmentSecurity
   
-  #before_filter :signed_in_user,	only: [:index, :edit, :update, :show]  
+  #before_filter :signed_in_user,	only: [:destroy, :edit, :update, :show]  
   #before_filter :correct_user,		only: [:edit, :update, :show]
-  #before_filter :admin_user,     	only: [:index, :show, :destroy]
+  #before_filter :admin_user,     	only: [:index, :destroy]
+  before_filter :signed_in_user,	only: [:index, :show]  
+  before_filter :correct_user,		only: [:show]
+  before_filter :admin_user,     	only: [:index, :destroy]
   
   def show
     if signed_in?
-      if current_user?(signed_in_user)
+      if current_user?(User.find(params[:id]))
         @user = User.find(params[:id])
         #@boards = Board.find_by_user_id(params[:id]) #this line is added
 	    #@microposts = @user.microposts.paginate(page: params[:page])
-      else
-	    flash[:error] = "Wrong user"
 	  end
 	else
 	  flash[:error] = "Not signed in"
+	  redirect_to root_path
 	end
   end
   
   def new
     if signed_in?
-	  redirect_to root_path
+	  redirect_to signup_path
 	else
+	  flash[:success] = "Welcome"
 	  @user = User.new
 	end
   end
@@ -53,6 +56,7 @@ class UsersController < ApplicationController
 	  end
 	else 
 	  flash[:error] = "Not signed in"
+	  redirect_to root_path
 	end
   end
   
@@ -61,15 +65,18 @@ class UsersController < ApplicationController
   end
   
   def destroy
-    #if signed_in? && current_user.admin?
+    if current_user?(User.find(params[:id]))
+	  notice = "You can't destroy yourself"
+	else
+	
 	  #notice: "You can't destroy yourself."
-	#else
-	User.find(params[:id]).boards.destroy
-    User.find(params[:id]).destroy
-	flash[:success] = "User destroyed."
-	redirect_to users_url
+	  #else
+	  User.find(params[:id]).boards.destroy
+      User.find(params[:id]).destroy
+	  flash[:success] = "User destroyed."
+	  redirect_to users_url
 	  #redirect_to root_path
-	#end
+	end
   end
   
   def update
@@ -83,26 +90,12 @@ class UsersController < ApplicationController
     end
   end
   
-  #def following
-  #  @title = "Following"
-  #  @user = User.find(params[:id])
-  #  @users = @user.followed_users.paginate(page: params[:page])
-  #  render 'show_follow'
-  #end
-
-  #def followers
-  #  @title = "Followers"
-  #  @user = User.find(params[:id])
-  #  @users = @user.followers.paginate(page: params[:page])
-  #  render 'show_follow'
-  #end
-  
   private
 
     def signed_in_user
 	  unless signed_in?
 		store_location
-		redirect_to(root_path, flash: { error: "Not signed in" } ) unless signed_in?
+		redirect_to(root_path, flash: { error: "Not signed in" } )
       end
 	end
 	
@@ -112,6 +105,11 @@ class UsersController < ApplicationController
     end
 	
 	def admin_user
-      redirect_to(root_path, flash: { error: "Not an administrator" } ) unless current_user.admin?
-    end
+	  if !signed_in?
+	    flash[:error] = "Not signed in"
+		redirect_to root_path
+	  else
+        redirect_to(root_path, flash: { error: "Not an administrator" } ) unless current_user.admin?
+      end
+	end
 end

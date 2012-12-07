@@ -17,8 +17,14 @@ class Advertisement < ActiveRecord::Base
   
   validate :sizing
   
+  before_save :make_tiles
+  
   def image_contents=(object)
 	self.image = object.read()
+  end
+  
+  def make_tiles
+    #for self.width
   end
   
   private
