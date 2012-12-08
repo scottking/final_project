@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 	  flash[:success] = "Welcome"
       redirect_back_or user
     else
-      flash[:error] = "Invalid"
+      flash[:error] = "Invalid WRONG password/email"
       render 'new'
     end
   end
