@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       redirect_back_or user
     else
       flash[:error] = "Invalid"
-      redirect_to signin_path
+      render 'new'
     end
   end
 

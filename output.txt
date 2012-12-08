@@ -1,41 +1,150 @@
-...F....F....FF.......
+...FFFFFFFFFFFFFFFFFF.
 
 Failures:
 
-  1) BoardPages create new board with valid information should create a payment detail
+  1) AdvertisementPages create new advertisement with valid information should create a payment detail
      Failure/Error: expect { click_button submit }.to change(PaymentDetail, :count).by(1)
        count should have been changed by 1, but was changed by 0
-     # ./spec/requests/board_pages_spec.rb:65:in `block (4 levels) in <top (required)>'
+     # ./spec/requests/advertisement_pages_spec.rb:45:in `block (4 levels) in <top (required)>'
 
-  2) BoardPages create new board with valid information after saving the board 
-     Failure/Error: specify { pd.amount.should == board.width * board.height }
+  2) AdvertisementPages create new advertisement with valid information should create width x height tiles
+     Failure/Error: end.to change { Tile.last.id }.by(15)
+     RuntimeError:
+       Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id
+     # ./spec/requests/advertisement_pages_spec.rb:51:in `block (5 levels) in <top (required)>'
+     # ./spec/requests/advertisement_pages_spec.rb:49:in `block (4 levels) in <top (required)>'
+
+  3) AdvertisementPages create new advertisement with valid information after saving the advertisment 
+     Failure/Error: fill_in 'Height', with: 3
+     Capybara::ElementNotFound:
+       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
+     # (eval):2:in `fill_in'
+     # ./spec/requests/advertisement_pages_spec.rb:30:in `block (4 levels) in <top (required)>'
+
+  4) AdvertisementPages create new advertisement with valid information after saving the advertisment 
+     Failure/Error: fill_in 'Height', with: 3
+     Capybara::ElementNotFound:
+       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
+     # (eval):2:in `fill_in'
+     # ./spec/requests/advertisement_pages_spec.rb:30:in `block (4 levels) in <top (required)>'
+
+  5) AdvertisementPages create new advertisement with valid information after saving the advertisment 
+     Failure/Error: fill_in 'Height', with: 3
+     Capybara::ElementNotFound:
+       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
+     # (eval):2:in `fill_in'
+     # ./spec/requests/advertisement_pages_spec.rb:30:in `block (4 levels) in <top (required)>'
+
+  6) AdvertisementPages create new advertisement with valid information after saving the advertisment 
+     Failure/Error: fill_in 'Height', with: 3
+     Capybara::ElementNotFound:
+       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
+     # (eval):2:in `fill_in'
+     # ./spec/requests/advertisement_pages_spec.rb:30:in `block (4 levels) in <top (required)>'
+
+  7) AdvertisementPages create new advertisement with valid information after saving the advertisment 
+     Failure/Error: fill_in 'Height', with: 3
+     Capybara::ElementNotFound:
+       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
+     # (eval):2:in `fill_in'
+     # ./spec/requests/advertisement_pages_spec.rb:30:in `block (4 levels) in <top (required)>'
+
+  8) AdvertisementPages create new advertisement with valid information after saving the advertisment 
+     Failure/Error: fill_in 'Height', with: 3
+     Capybara::ElementNotFound:
+       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
+     # (eval):2:in `fill_in'
+     # ./spec/requests/advertisement_pages_spec.rb:30:in `block (4 levels) in <top (required)>'
+
+  9) AdvertisementPages create new advertisement with valid information after saving the advertisment 
+     Failure/Error: fill_in 'Height', with: 3
+     Capybara::ElementNotFound:
+       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
+     # (eval):2:in `fill_in'
+     # ./spec/requests/advertisement_pages_spec.rb:30:in `block (4 levels) in <top (required)>'
+
+  10) AdvertisementPages create new advertisement with valid information after saving the advertisment 
+     Failure/Error: fill_in 'Height', with: 3
+     Capybara::ElementNotFound:
+       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
+     # (eval):2:in `fill_in'
+     # ./spec/requests/advertisement_pages_spec.rb:30:in `block (4 levels) in <top (required)>'
+
+  11) AdvertisementPages create new advertisement with valid information after saving the advertisment 
+     Failure/Error: fill_in 'Height', with: 3
+     Capybara::ElementNotFound:
+       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
+     # (eval):2:in `fill_in'
+     # ./spec/requests/advertisement_pages_spec.rb:30:in `block (4 levels) in <top (required)>'
+
+  12) AdvertisementPages create new advertisement with valid information after saving the advertisment 
+     Failure/Error: fill_in 'Height', with: 3
+     Capybara::ElementNotFound:
+       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
+     # (eval):2:in `fill_in'
+     # ./spec/requests/advertisement_pages_spec.rb:30:in `block (4 levels) in <top (required)>'
+
+  13) AdvertisementPages create new advertisement with valid information after saving the advertisment 
+     Failure/Error: fill_in 'Height', with: 3
+     Capybara::ElementNotFound:
+       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
+     # (eval):2:in `fill_in'
+     # ./spec/requests/advertisement_pages_spec.rb:30:in `block (4 levels) in <top (required)>'
+
+  14) AdvertisementPages create new advertisement with valid information after saving the advertisment 
+     Failure/Error: fill_in 'Height', with: 3
+     Capybara::ElementNotFound:
+       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
+     # (eval):2:in `fill_in'
+     # ./spec/requests/advertisement_pages_spec.rb:30:in `block (4 levels) in <top (required)>'
+
+  15) AdvertisementPages create new advertisement with valid information after saving the advertisment 
+     Failure/Error: fill_in 'Height', with: 3
+     Capybara::ElementNotFound:
+       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
+     # (eval):2:in `fill_in'
+     # ./spec/requests/advertisement_pages_spec.rb:30:in `block (4 levels) in <top (required)>'
+
+  16) AdvertisementPages having an advertisement age should add a new payment detail
+     Failure/Error: expect { ad.board.age }.to change(PaymentDetail, :count).by(1)
+       count should have been changed by 1, but was changed by 0
+     # ./spec/requests/advertisement_pages_spec.rb:92:in `block (3 levels) in <top (required)>'
+
+  17) AdvertisementPages having an advertisement age should reduce in cost by half 
+     Failure/Error: specify { payment.amount.should == 4 * 4 / 2 }
      NoMethodError:
        undefined method `amount' for nil:NilClass
-     # ./spec/requests/board_pages_spec.rb:79:in `block (5 levels) in <top (required)>'
+     # ./spec/requests/advertisement_pages_spec.rb:98:in `block (4 levels) in <top (required)>'
 
-  3) BoardPages create new board with valid information after saving the board in browser 
-     Failure/Error: fill_in 'Height', with: 10
-     Capybara::ElementNotFound:
-       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
-     # (eval):2:in `fill_in'
-     # ./spec/requests/board_pages_spec.rb:54:in `block (4 levels) in <top (required)>'
+  18) AdvertisementPages having an advertisement age tiles should never cost less than $0.01 
+     Failure/Error: specify { payment.amount.should == 4 * 4 * 0.01 }
+     NoMethodError:
+       undefined method `amount' for nil:NilClass
+     # ./spec/requests/advertisement_pages_spec.rb:104:in `block (4 levels) in <top (required)>'
 
-  4) BoardPages create new board with valid information after saving the board in browser 
-     Failure/Error: fill_in 'Height', with: 10
-     Capybara::ElementNotFound:
-       cannot fill in, no text field, text area or password field with id, name, or label 'Height' found
-     # (eval):2:in `fill_in'
-     # ./spec/requests/board_pages_spec.rb:54:in `block (4 levels) in <top (required)>'
-
-Finished in 32 seconds
-22 examples, 4 failures
+Finished in 1 minute 31.08 seconds
+22 examples, 18 failures
 
 Failed examples:
 
-rspec ./spec/requests/board_pages_spec.rb:64 # BoardPages create new board with valid information should create a payment detail
-rspec ./spec/requests/board_pages_spec.rb:79 # BoardPages create new board with valid information after saving the board 
-rspec ./spec/requests/board_pages_spec.rb:88 # BoardPages create new board with valid information after saving the board in browser 
-rspec ./spec/requests/board_pages_spec.rb:89 # BoardPages create new board with valid information after saving the board in browser 
+rspec ./spec/requests/advertisement_pages_spec.rb:44 # AdvertisementPages create new advertisement with valid information should create a payment detail
+rspec ./spec/requests/advertisement_pages_spec.rb:48 # AdvertisementPages create new advertisement with valid information should create width x height tiles
+rspec ./spec/requests/advertisement_pages_spec.rb:65 # AdvertisementPages create new advertisement with valid information after saving the advertisment 
+rspec ./spec/requests/advertisement_pages_spec.rb:66 # AdvertisementPages create new advertisement with valid information after saving the advertisment 
+rspec ./spec/requests/advertisement_pages_spec.rb:62 # AdvertisementPages create new advertisement with valid information after saving the advertisment 
+rspec ./spec/requests/advertisement_pages_spec.rb:67 # AdvertisementPages create new advertisement with valid information after saving the advertisment 
+rspec ./spec/requests/advertisement_pages_spec.rb:61 # AdvertisementPages create new advertisement with valid information after saving the advertisment 
+rspec ./spec/requests/advertisement_pages_spec.rb:73 # AdvertisementPages create new advertisement with valid information after saving the advertisment 
+rspec ./spec/requests/advertisement_pages_spec.rb:69 # AdvertisementPages create new advertisement with valid information after saving the advertisment 
+rspec ./spec/requests/advertisement_pages_spec.rb:60 # AdvertisementPages create new advertisement with valid information after saving the advertisment 
+rspec ./spec/requests/advertisement_pages_spec.rb:68 # AdvertisementPages create new advertisement with valid information after saving the advertisment 
+rspec ./spec/requests/advertisement_pages_spec.rb:70 # AdvertisementPages create new advertisement with valid information after saving the advertisment 
+rspec ./spec/requests/advertisement_pages_spec.rb:72 # AdvertisementPages create new advertisement with valid information after saving the advertisment 
+rspec ./spec/requests/advertisement_pages_spec.rb:64 # AdvertisementPages create new advertisement with valid information after saving the advertisment 
+rspec ./spec/requests/advertisement_pages_spec.rb:74 # AdvertisementPages create new advertisement with valid information after saving the advertisment 
+rspec ./spec/requests/advertisement_pages_spec.rb:91 # AdvertisementPages having an advertisement age should add a new payment detail
+rspec ./spec/requests/advertisement_pages_spec.rb:98 # AdvertisementPages having an advertisement age should reduce in cost by half 
+rspec ./spec/requests/advertisement_pages_spec.rb:104 # AdvertisementPages having an advertisement age tiles should never cost less than $0.01 
 
-Randomized with seed 36788
+Randomized with seed 17576
 
