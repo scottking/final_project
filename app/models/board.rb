@@ -17,7 +17,7 @@ class Board < ActiveRecord::Base
   
   #validate :garbage
   
-  #before_save :create_fake_ad, :create_payment_detail
+  #after_validation :create_fake_ad#, :create_payment_detail
   
   private
   
@@ -29,24 +29,27 @@ class Board < ActiveRecord::Base
 	
 	def create_fake_ad
 	  @ad = Advertisement.new
-	  @ad = self.advertisements.build(params[:advertisement])
 	  
-	  if !params[:upload].blank?
-	    @advertisment.image = @advertisment.image_contents.read
-	  end
+	  #@ad.image = @ad.image_contents.read
 	  
-	  @ad.user = current_user
+	  @user = current_user
+	  
+	  @ad.user = signed_in_user
 	  @ad.x_location = 0
 	  @ad.y_location = 0
 	  @ad.width = self.width
 	  @ad.height = self.height
 	  @ad.cost = 0
 	  
-	  if @advertisement.save
+	  self.advertisements.build(@ad)
+	  #@ad = self.advertisements.build(params[:advertisement])
+	  
+	  if @ad.save
         flash[:success] = "Advertisement created"
         redirect_to self
       else
-        render 'new'
+	    flash[:error] = "Unable to create fake advertisement"
+        redirect_to root_path
       end
 	  
 	end

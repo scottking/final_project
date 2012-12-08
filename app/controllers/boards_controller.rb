@@ -18,28 +18,27 @@ class BoardsController < ApplicationController
 	  @board = current_user.boards.build(params[:board])
 	  #@board.user = current_user
       if @board.save
-	    #if @board.advertisements == nil
-		#  redirect_to root_path
-		#end
-	    /@advertisement = Advertisement.new
-		@advertisement.board = @board
-		@advertisement.user = User.find_by_id(1)
-		@advertisement.width = @board.width
-		@advertisement.height = @board.height
-		@advertisement.x_location = 0
-		@advertisement.y_location = 0
-		if @advertisement.save
-		  flash[:success] = "Successfully create new advertisement!"/
-		  flash[:success] = "Board created"
+	    
+	    @ad = @board.advertisements.build()
+	    #@ad.image = @ad.image_contents.read
+	    @ad.user = current_user
+	    @ad.x_location = 0
+	    @ad.y_location = 0
+	    @ad.width = @board.width
+	    @ad.height = @board.height
+		
+		@ad.image = "\assets\images\shawn.jpg"
+		@ad.save
+        		
+		flash[:success] = "Board created"
           redirect_to @board
-		/else
-		  render 'new'
-		end/
-        
       else
+	    flash[:error] = "Invalid"
         render 'new'
       end
+		
 	end
+	
   end
 
   def show
