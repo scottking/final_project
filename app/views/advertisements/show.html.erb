@@ -7,9 +7,12 @@
 	<p>width: <%= @advertisement.width %></p>
 	<p>y_loc: <%= @advertisement.y_location %></p>
 	<p>height: <%= @advertisement.height %></p>
+	<p>Created by: <%= @advertisement.user.name %></p>
 	
 	<p>Board name: <%= @advertisement.board.name %></p>
 	<p>User name: <%= @advertisement.board.user.name %></p>
+	
+	
 	
 	<%= link_to "Delete Advertisement", board_advertisement_path(@advertisement),
 								method: :delete,

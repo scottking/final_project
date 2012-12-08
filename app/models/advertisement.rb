@@ -17,14 +17,35 @@ class Advertisement < ActiveRecord::Base
   
   validate :sizing
   
-  before_save :make_tiles
+  #before_create :make_tiles
   
   def image_contents=(object)
 	self.image = object.read()
   end
   
   def make_tiles
-    #for self.width
+    for x in x_location..(self.width+self.x_location - 1) do
+	  for y in y_location..(self.height+self.y_location - 1) do
+	    @tile = Tiles.where(x_location => x, y_location => y)
+		if @tile.nil?
+		  #create tile
+		  @t = Tiles.new
+		  @t.advertisement = self
+		  @t.x_location = x
+		  @t.y_location = y
+		  @t.age = 0
+		  @t.save
+		  
+		  
+		else
+		  #make this the one we should be useing
+		  @tile.x_location = x
+		  @tile.y_location = y
+		  @tile.save
+		  
+		end
+	  end
+	end
   end
   
   private
