@@ -4,15 +4,15 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.where('lower(email) = ?', params[:session][:email].downcase).first
-    #user = User.find_by_email(params[:session][:email].downcase)
+    #user = User.where('lower(email) = ?', params[:session][:email].downcase).first
+    user = User.find_by_email(params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       sign_in user
 	  flash[:success] = "Welcome"
       redirect_back_or user
     else
       flash[:error] = "Invalid"
-      render signin_path
+      redirect_to signin_path
     end
   end
 
