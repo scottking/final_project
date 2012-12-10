@@ -17,7 +17,9 @@ ElectronicBulletinBoard::Application.routes.draw do
   resources :sessions,      only: [:new, :create, :destroy]
   resources :users
   resources :boards do
-	resources :advertisements
+	resources :advertisements do
+	  resources :tiles
+	end
   end
   resources :images
   

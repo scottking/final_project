@@ -1,0 +1,38 @@
+..F....F....F.........
+
+Failures:
+
+  1) BoardPages create new board with valid information should create a payment detail
+     Failure/Error: expect { click_button submit }.to change(PaymentDetail, :count).by(1)
+       count should have been changed by 1, but was changed by 0
+     # ./spec/requests/board_pages_spec.rb:65:in `block (4 levels) in <top (required)>'
+
+  2) BoardPages create new board with valid information after saving the board 
+     Failure/Error: specify { pd.amount.should == board.width * board.height }
+     NoMethodError:
+       undefined method `amount' for nil:NilClass
+     # ./spec/requests/board_pages_spec.rb:79:in `block (5 levels) in <top (required)>'
+
+  3) BoardPages create new board with valid information after saving the board in browser 
+     Failure/Error: specify { "#{64 * board.width}px".should eql_element_property_value('.ad_container', 'width') }
+     Selenium::WebDriver::Error::NoSuchElementError:
+       Unable to locate element: {"method":"css selector","selector":".ad_container"}
+     # [remote server] file:///C:/Users/SCOTTK~1/AppData/Local/Temp/webdriver-profile20121209-7160-1twlqyf/extensions/fxdriver@googlecode.com/components/driver_component.js:8319:in `unknown'
+     # [remote server] file:///C:/Users/SCOTTK~1/AppData/Local/Temp/webdriver-profile20121209-7160-1twlqyf/extensions/fxdriver@googlecode.com/components/driver_component.js:8328:in `unknown'
+     # [remote server] file:///C:/Users/SCOTTK~1/AppData/Local/Temp/webdriver-profile20121209-7160-1twlqyf/extensions/fxdriver@googlecode.com/components/command_processor.js:10337:in `unknown'
+     # [remote server] file:///C:/Users/SCOTTK~1/AppData/Local/Temp/webdriver-profile20121209-7160-1twlqyf/extensions/fxdriver@googlecode.com/components/command_processor.js:10342:in `unknown'
+     # [remote server] file:///C:/Users/SCOTTK~1/AppData/Local/Temp/webdriver-profile20121209-7160-1twlqyf/extensions/fxdriver@googlecode.com/components/command_processor.js:10282:in `unknown'
+     # ./spec/support/utilities.rb:31:in `block (2 levels) in <top (required)>'
+     # ./spec/requests/board_pages_spec.rb:88:in `block (6 levels) in <top (required)>'
+
+Finished in 46.68 seconds
+22 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/requests/board_pages_spec.rb:64 # BoardPages create new board with valid information should create a payment detail
+rspec ./spec/requests/board_pages_spec.rb:79 # BoardPages create new board with valid information after saving the board 
+rspec ./spec/requests/board_pages_spec.rb:88 # BoardPages create new board with valid information after saving the board in browser 
+
+Randomized with seed 38754
+

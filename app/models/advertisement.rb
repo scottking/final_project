@@ -24,24 +24,41 @@ class Advertisement < ActiveRecord::Base
   end
   
   def make_tiles
-    for x in x_location..(self.width+self.x_location - 1) do
-	  for y in y_location..(self.height+self.y_location - 1) do
-	    @tile = Tiles.where(x_location => x, y_location => y)
+    for x in x_location..(width+x_location - 1)
+	  for y in y_location..(height+y_location - 1)
+	    @tile = board.tiles.where(:x_location => x, :y_location => y).first
 		if @tile.nil?
 		  #create tile
-		  @t = Tiles.new
-		  @t.advertisement = self
-		  @t.x_location = x
-		  @t.y_location = y
-		  @t.age = 0
-		  @t.save
+		  @tile = board.tiles.build(:x_location => x, :y_location => y)
+		  @tile.cost = 0;
 		  
+		  #don't need to set user and other features because this is "fake"
+		  #tile made from "fake" advertisment
 		  
 		else
 		  #make this the one we should be useing
+		  current_cost = @tile.cost
+		  
+		  #@tile.destroy
+		  
+		  @newTile = board.tiles.build(:x_location => x, :y_location => y)
+		  
+		  #@newTile.cost = current_cost * 2
+		  
+		  new_cost = current_cost * 2
+		  if new_cost < 1
+		    new_cost = 1
+		  end
+		  
+		  new_cost = new_cost.to_f
+		  @newTile.cost = new_cost
+		  /if @newTile.cost < 1
+		    @newTile.cost = 1
+		  end
+		  
 		  @tile.x_location = x
 		  @tile.y_location = y
-		  @tile.save
+		  @tile.save/
 		  
 		end
 	  end

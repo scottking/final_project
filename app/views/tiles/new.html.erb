@@ -1,0 +1,22 @@
+<%= render 'shared/menu' %>
+<h1>Tiles#new</h1>
+<p>Find me in app/views/tiles/new.html.erb</p>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for([@board, @advertisement, @tile]) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+	  
+	  <%= f.label :x_location %>
+      <%= f.text_field :x_location, :id => "X Location" %>
+	  
+	  <%= f.label :y_location %>
+      <%= f.text_field :y_location, :id => "Y Location" %>
+	  
+	  <%= f.label :cost %>
+      <%= f.text_field :cost %>
+	  
+      <%= f.submit "Create tile", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

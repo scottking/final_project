@@ -29,9 +29,18 @@ class BoardsController < ApplicationController
 		
 		@ad.image = "\assets\images\shawn.jpg"
 		@ad.save
-        		
+        
+		/@pay = @board.payment_detail.build()
+		#@pay = @board.payables.build()
+		#@pay = Payment_Detail.new
+		@pay.amount = @board.width * @board.height
+		@pay.user = current_user
+		
+		@pay.save/
+		
+		
 		flash[:success] = "Board created"
-          redirect_to @board
+        redirect_to @board
       else
 	    flash[:error] = "Invalid"
         render 'new'
@@ -64,6 +73,7 @@ class BoardsController < ApplicationController
     Board.find(params[:id]).destroy
 	flash[:success] = "Board destroyed."
 	redirect_to boards_path
+	
   end
 	
 	
