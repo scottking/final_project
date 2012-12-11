@@ -40,6 +40,7 @@
   <div class="ads">
   
   <% @board.advertisements.each do |ad| %>
+    <% if ad.user != nil %>
     <div>
 	  <p>Created by: <%= ad.user.name %></p>
 	  <p>X_loc: <%= ad.x_location %></p>
@@ -48,6 +49,7 @@
 	  <p>Height: <%= ad.height %></p>
 	  
 	</div>
+	<% end %>
   <% end %>
   
   </div>

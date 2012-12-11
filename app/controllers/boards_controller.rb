@@ -19,7 +19,7 @@ class BoardsController < ApplicationController
 	  #@board.user = current_user
       if @board.save
 	    
-	    @ad = @board.advertisements.build()
+	    /@ad = @board.advertisements.build()
 	    #@ad.image = @ad.image_contents.read
 	    @ad.user = current_user
 	    @ad.x_location = 0
@@ -28,7 +28,7 @@ class BoardsController < ApplicationController
 	    @ad.height = @board.height
 		
 		@ad.image = "\assets\images\shawn.jpg"
-		@ad.save
+		@ad.save/
         
 		/@pay = @board.payment_detail.build()
 		#@pay = @board.payables.build()

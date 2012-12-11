@@ -17,6 +17,8 @@ class Advertisement < ActiveRecord::Base
   
   validate :sizing
   
+  after_create :make_tiles
+  
   #before_create :make_tiles
   
   def image_contents=(object)
@@ -24,13 +26,16 @@ class Advertisement < ActiveRecord::Base
   end
   
   def make_tiles
-    for x in x_location..(width+x_location - 1)
-	  for y in y_location..(height+y_location - 1)
-	    @tile = board.tiles.where(:x_location => x, :y_location => y).first
+    for my_x in x_location..(width + x_location + 1)
+	  for my_y in y_location..(height + y_location + 1)
+	    @tile = board.tiles.where(x_location: my_x, y_location: my_y).first
 		if @tile.nil?
 		  #create tile
-		  @tile = board.tiles.build(:x_location => x, :y_location => y)
-		  @tile.cost = 0;
+		  @start_tile = tiles.build(x_location: my_x, y_location: my_y)#:x_location => my_x, :y_location => my_y)
+		  @start_tile.cost = 1;
+		  #@start_tile.x_location = my_x
+		  #@start_tile.y_location = my_y
+		  @start_tile.save
 		  
 		  #don't need to set user and other features because this is "fake"
 		  #tile made from "fake" advertisment
@@ -40,8 +45,8 @@ class Advertisement < ActiveRecord::Base
 		  current_cost = @tile.cost
 		  
 		  #@tile.destroy
-		  
-		  @newTile = board.tiles.build(:x_location => x, :y_location => y)
+		  @tile.destroy
+		  @tile = tiles.build()#:x_location => my_x, :y_location => my_y)
 		  
 		  #@newTile.cost = current_cost * 2
 		  
@@ -51,14 +56,11 @@ class Advertisement < ActiveRecord::Base
 		  end
 		  
 		  new_cost = new_cost.to_f
-		  @newTile.cost = new_cost
-		  /if @newTile.cost < 1
-		    @newTile.cost = 1
-		  end
+		  @tile.cost = new_cost
 		  
-		  @tile.x_location = x
-		  @tile.y_location = y
-		  @tile.save/
+		  @tile.x_location = my_x
+		  @tile.y_location = my_y
+		  @tile.save
 		  
 		end
 	  end
