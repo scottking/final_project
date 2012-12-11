@@ -1,30 +1,43 @@
-*******
+F.FF......F...........
 
-Pending:
-  advertisements/create.html.erb add some examples to (or delete) C:/Sites/final_project/electronic_bulletin_board/spec/views/advertisements/create.html.erb_spec.rb
-    # No reason given
-    # ./spec/views/advertisements/create.html.erb_spec.rb:4
-  advertisements/update.html.erb add some examples to (or delete) C:/Sites/final_project/electronic_bulletin_board/spec/views/advertisements/update.html.erb_spec.rb
-    # No reason given
-    # ./spec/views/advertisements/update.html.erb_spec.rb:4
-  advertisements/index.html.erb add some examples to (or delete) C:/Sites/final_project/electronic_bulletin_board/spec/views/advertisements/index.html.erb_spec.rb
-    # No reason given
-    # ./spec/views/advertisements/index.html.erb_spec.rb:4
-  advertisements/destroy.html.erb add some examples to (or delete) C:/Sites/final_project/electronic_bulletin_board/spec/views/advertisements/destroy.html.erb_spec.rb
-    # No reason given
-    # ./spec/views/advertisements/destroy.html.erb_spec.rb:4
-  advertisements/edit.html.erb add some examples to (or delete) C:/Sites/final_project/electronic_bulletin_board/spec/views/advertisements/edit.html.erb_spec.rb
-    # No reason given
-    # ./spec/views/advertisements/edit.html.erb_spec.rb:4
-  advertisements/show.html.erb add some examples to (or delete) C:/Sites/final_project/electronic_bulletin_board/spec/views/advertisements/show.html.erb_spec.rb
-    # No reason given
-    # ./spec/views/advertisements/show.html.erb_spec.rb:4
-  advertisements/new.html.erb add some examples to (or delete) C:/Sites/final_project/electronic_bulletin_board/spec/views/advertisements/new.html.erb_spec.rb
-    # No reason given
-    # ./spec/views/advertisements/new.html.erb_spec.rb:4
+Failures:
 
-Finished in 0.048 seconds
-7 examples, 0 failures, 7 pending
+  1) AdvertisementPages having an advertisement age should add a new payment detail
+     Failure/Error: expect { ad.board.age }.to change(PaymentDetail, :count).by(1)
+       count should have been changed by 1, but was changed by 0
+     # ./spec/requests/advertisement_pages_spec.rb:92:in `block (3 levels) in <top (required)>'
 
-Randomized with seed 52722
+  2) AdvertisementPages having an advertisement age tiles should never cost less than $0.01 
+     Failure/Error: specify { payment.amount.should == 4 * 4 * 0.01 }
+       expected: 0.16
+            got: #<BigDecimal:6348d68,'0.16E2',9(36)> (using ==)
+     # ./spec/requests/advertisement_pages_spec.rb:104:in `block (4 levels) in <top (required)>'
+
+  3) AdvertisementPages having an advertisement age should reduce in cost by half 
+     Failure/Error: specify { payment.amount.should == 4 * 4 / 2 }
+       expected: 8
+            got: #<BigDecimal:6276300,'0.16E2',9(36)> (using ==)
+     # ./spec/requests/advertisement_pages_spec.rb:98:in `block (4 levels) in <top (required)>'
+
+  4) AdvertisementPages create new advertisement with valid information after saving the advertisment 
+     Failure/Error: specify { ad.user.should == user }
+       expected: #<User id: 4784, name: "User 21", email: "user21@example.com", password_digest: "$2a$10$c1ftUQ1f5/S1.zgVlDVObexZXh3Qa30Qpef.Jv9xFw4p...", admin: nil, remember_token: "sCxt34tW5I30IojPfZQ43g", created_at: "2012-12-11 15:44:06", updated_at: "2012-12-11 15:44:06">
+            got: #<User id: 4785, name: "User 22", email: "user22@example.com", password_digest: "$2a$10$G0WV2c4te8Skk1DIkVc2Mu7F7VbhG/HjPaQMp02HZYqj...", admin: nil, remember_token: "NuiuYCteBusX8TNNTuDuFg", created_at: "2012-12-11 15:44:09", updated_at: "2012-12-11 15:44:09"> (using ==)
+       Diff:
+       @@ -1,2 +1,2 @@
+       -#<User id: 4784, name: "User 21", email: "user21@example.com", password_digest: "$2a$10$c1ftUQ1f5/S1.zgVlDVObexZXh3Qa30Qpef.Jv9xFw4p...", admin: nil, remember_token: "sCxt34tW5I30IojPfZQ43g", created_at: "2012-12-11 15:44:06", updated_at: "2012-12-11 15:44:06">
+       +#<User id: 4785, name: "User 22", email: "user22@example.com", password_digest: "$2a$10$G0WV2c4te8Skk1DIkVc2Mu7F7VbhG/HjPaQMp02HZYqj...", admin: nil, remember_token: "NuiuYCteBusX8TNNTuDuFg", created_at: "2012-12-11 15:44:09", updated_at: "2012-12-11 15:44:09">
+     # ./spec/requests/advertisement_pages_spec.rb:61:in `block (5 levels) in <top (required)>'
+
+Finished in 2 minutes 11.87 seconds
+22 examples, 4 failures
+
+Failed examples:
+
+rspec ./spec/requests/advertisement_pages_spec.rb:91 # AdvertisementPages having an advertisement age should add a new payment detail
+rspec ./spec/requests/advertisement_pages_spec.rb:104 # AdvertisementPages having an advertisement age tiles should never cost less than $0.01 
+rspec ./spec/requests/advertisement_pages_spec.rb:98 # AdvertisementPages having an advertisement age should reduce in cost by half 
+rspec ./spec/requests/advertisement_pages_spec.rb:61 # AdvertisementPages create new advertisement with valid information after saving the advertisment 
+
+Randomized with seed 21092
 

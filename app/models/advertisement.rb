@@ -18,17 +18,36 @@ class Advertisement < ActiveRecord::Base
   validate :sizing
   
   after_create :make_tiles
+  after_create :create_payment
+  after_update :age
   
-  #before_create :make_tiles
+  def charge
+	width * height
+  end
   
+  def age
+    @pay = user.payment_details.where(payable: self)
+	@pay.cost = @pay.cost / 2
+  end
+  
+  def create_payment
+	
+	  @payment = user.payment_details.build(amount: width * height)
+	  @payment.amount = width * height
+	  @payment.payable = self
+	  
+	  @payment.save
+	  
+  end
+	
   def image_contents=(object)
 	self.image = object.read()
   end
   
   def make_tiles
-    for my_x in x_location..(width + x_location + 1)
-	  for my_y in y_location..(height + y_location + 1)
-	    @tile = board.tiles.where(x_location: my_x, y_location: my_y).first
+    for my_x in x_location..(width + x_location - 1)
+	  for my_y in y_location..(height + y_location - 1)
+	    @tile = tiles.where(x_location: my_x, y_location: my_y).first
 		if @tile.nil?
 		  #create tile
 		  @start_tile = tiles.build(x_location: my_x, y_location: my_y)#:x_location => my_x, :y_location => my_y)

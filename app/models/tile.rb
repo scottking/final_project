@@ -23,9 +23,19 @@ class Tile < ActiveRecord::Base
 	    errors.add(:x_location, "Can't be smaller than advertisement")
 	  end
 	  
-	  if self.advertisement.x_location + self.advertisement.width - 1 <= self.x_location
-	    errors.add(:x_location, "Larger than specified width")
+	  if self.x_location > self.advertisement.x_location + self.advertisement.width - 1
+	    errors.add(:x_location, "Cant't be past ad width")
 	  end
+	  
+	  if self.y_location > self.advertisement.y_location + self.advertisement.height - 1
+	    errors.add(:y_location, "Can't be past ad height")
+	  end
+	  
+	  
+	  
+	  #if self.advertisement.x_location + self.advertisement.width - 1 <= self.x_location
+	  #  errors.add(:x_location, "Larger than specified width")
+	  #end
 	  
 	  if self.y_location >= self.board.height
 	    errors.add(:y_location, "Larger than board")
@@ -35,9 +45,9 @@ class Tile < ActiveRecord::Base
 	    errors.add(:y_location, "Smaller than advertisement location")
 	  end
 	  
-	  if self.advertisement.y_location + self.advertisement.height - 1 <= self.y_location
-	    errors.add(:y_location, "Larger than specified height")
-	  end
+	  #if self.advertisement.y_location + self.advertisement.height - 1 <= self.y_location
+	  #  errors.add(:y_location, "Larger than specified height")
+	  #end
 	  
 	  end
     end

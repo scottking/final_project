@@ -18,20 +18,14 @@ class Board < ActiveRecord::Base
   #validate :garbage
   
   after_create :create_fake_ad#, :create_payment_detail
+  after_create :create_payment
   
-  private
-  
-    def garbage
-      if self.timezone == "garbage"
-	    errors.add(:timezone, "Incorrect timezone")
-	  end
-    end
 	
 	def create_fake_ad
 	  
 	  @ad = advertisements.build()
 	    #@ad.image = @ad.image_contents.read
-	    @ad.user = nil
+	    @ad.user = user
 	    @ad.x_location = 0
 	    @ad.y_location = 0
 	    @ad.width = width
@@ -40,38 +34,27 @@ class Board < ActiveRecord::Base
 		@ad.image = "\assets\images\shawn.jpg"
 		@ad.save
 	  
-	  
-	  /@ad = Advertisement.new
-	  
-	  #@ad.image = @ad.image_contents.read
-	  
-	  @user = current_user
-	  
-	  @ad.user = signed_in_user
-	  @ad.x_location = 0
-	  @ad.y_location = 0
-	  @ad.width = self.width
-	  @ad.height = self.height
-	  @ad.cost = 0
-	  
-	  self.advertisements.build(@ad)/
-	  #@ad = self.advertisements.build(params[:advertisement])
-	  
-	  /if @ad.save
-        flash[:success] = "Advertisement created"
-        redirect_to self
-      else
-	    flash[:error] = "Unable to create fake advertisement"
-        redirect_to root_path
-      end/
-	  
 	end
 	
-	def create_payment_detail
-	  #@payment = Paymentment_details.new
+	def create_payment
+	
+	  @payment = user.payment_details.build(amount: width * height)
+	  @payment.amount = width * height
+	  @payment.payable = self
 	  
-	  #@payment.board = board
+	  @payment.save
 	  
 	end
   
+  def age
+    
+  end
+  
+  private
+  
+    def garbage
+      if self.timezone == "garbage"
+	    errors.add(:timezone, "Incorrect timezone")
+	  end
+    end
 end
